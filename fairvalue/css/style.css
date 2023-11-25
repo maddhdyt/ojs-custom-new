@@ -1,0 +1,486 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap");
+.has_site_logo .pkp_site_name {
+  width: auto;
+  margin-top: -35px;
+}
+
+.pkp_site_name .is_img img {
+  display: block;
+  max-height: 50px;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.pkp_page_index .journals {
+  margin-top: 30px;
+  display: none;
+}
+
+br {
+  display: none;
+}
+
+.style1:link,
+.style1:visited,
+.style1:active {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.style1:hover {
+  color: #ffd800;
+}
+
+.pkp_brand_footer {
+  padding: 30px;
+  display: none;
+}
+
+.pkp_navigation_primary > li > a {
+  margin: 0px 5px 5px 0px;
+  padding: 10px 10px 10px 10px;
+  border-bottom: 2px solid transparent;
+  color: #fff;
+  background-color: #27506d;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .pkp_navigation_user {
+    text-align: center;
+    font-size: 13px;
+    padding-right: 20px;
+  }
+}
+* {
+  font-family: "EB Garamond", serif !important;
+}
+
+.fa.fa-search {
+  display: none !important;
+}
+
+body {
+  overflow-x: hidden !important;
+  background-image: url("https://ik.imagekit.io/arkapublisher/jurnal/image%2027.png?updatedAt=1697595301447");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: 20%;
+}
+
+.cmp_form.cmp_form.login,
+.cmp_form.register {
+  min-width: 100% !important;
+  padding: 20px;
+  border-radius: 6px !important;
+  box-shadow: 0px 1px 4px 0px rgb(221, 221, 221) !important;
+}
+.cmp_form.cmp_form.login .fields .username,
+.cmp_form.cmp_form.login .fields .password,
+.cmp_form.cmp_form.login .fields .email,
+.cmp_form.cmp_form.login .fields .given_name,
+.cmp_form.cmp_form.login .fields .family_name,
+.cmp_form.cmp_form.login .fields .affiliation,
+.cmp_form.cmp_form.login .fields .country,
+.cmp_form.register .fields .username,
+.cmp_form.register .fields .password,
+.cmp_form.register .fields .email,
+.cmp_form.register .fields .given_name,
+.cmp_form.register .fields .family_name,
+.cmp_form.register .fields .affiliation,
+.cmp_form.register .fields .country {
+  padding-bottom: 20px !important;
+}
+.cmp_form.cmp_form.login .fields .username label,
+.cmp_form.cmp_form.login .fields .password label,
+.cmp_form.cmp_form.login .fields .email label,
+.cmp_form.cmp_form.login .fields .given_name label,
+.cmp_form.cmp_form.login .fields .family_name label,
+.cmp_form.cmp_form.login .fields .affiliation label,
+.cmp_form.cmp_form.login .fields .country label,
+.cmp_form.register .fields .username label,
+.cmp_form.register .fields .password label,
+.cmp_form.register .fields .email label,
+.cmp_form.register .fields .given_name label,
+.cmp_form.register .fields .family_name label,
+.cmp_form.register .fields .affiliation label,
+.cmp_form.register .fields .country label {
+  margin-top: 5px;
+}
+.cmp_form.cmp_form.login .fields .username label span,
+.cmp_form.cmp_form.login .fields .password label span,
+.cmp_form.cmp_form.login .fields .email label span,
+.cmp_form.cmp_form.login .fields .given_name label span,
+.cmp_form.cmp_form.login .fields .family_name label span,
+.cmp_form.cmp_form.login .fields .affiliation label span,
+.cmp_form.cmp_form.login .fields .country label span,
+.cmp_form.register .fields .username label span,
+.cmp_form.register .fields .password label span,
+.cmp_form.register .fields .email label span,
+.cmp_form.register .fields .given_name label span,
+.cmp_form.register .fields .family_name label span,
+.cmp_form.register .fields .affiliation label span,
+.cmp_form.register .fields .country label span {
+  font-size: 16px !important;
+  margin-bottom: 5px !important;
+}
+.cmp_form.cmp_form.login .fields .username label input,
+.cmp_form.cmp_form.login .fields .username label select,
+.cmp_form.cmp_form.login .fields .password label input,
+.cmp_form.cmp_form.login .fields .password label select,
+.cmp_form.cmp_form.login .fields .email label input,
+.cmp_form.cmp_form.login .fields .email label select,
+.cmp_form.cmp_form.login .fields .given_name label input,
+.cmp_form.cmp_form.login .fields .given_name label select,
+.cmp_form.cmp_form.login .fields .family_name label input,
+.cmp_form.cmp_form.login .fields .family_name label select,
+.cmp_form.cmp_form.login .fields .affiliation label input,
+.cmp_form.cmp_form.login .fields .affiliation label select,
+.cmp_form.cmp_form.login .fields .country label input,
+.cmp_form.cmp_form.login .fields .country label select,
+.cmp_form.register .fields .username label input,
+.cmp_form.register .fields .username label select,
+.cmp_form.register .fields .password label input,
+.cmp_form.register .fields .password label select,
+.cmp_form.register .fields .email label input,
+.cmp_form.register .fields .email label select,
+.cmp_form.register .fields .given_name label input,
+.cmp_form.register .fields .given_name label select,
+.cmp_form.register .fields .family_name label input,
+.cmp_form.register .fields .family_name label select,
+.cmp_form.register .fields .affiliation label input,
+.cmp_form.register .fields .affiliation label select,
+.cmp_form.register .fields .country label input,
+.cmp_form.register .fields .country label select {
+  outline: none !important;
+  display: block !important;
+  min-width: 100% !important;
+  border: 1px solid #ddd !important;
+  padding: 6px 14px !important;
+  height: auto !important;
+  box-sizing: border-box !important;
+  margin-bottom: 10px !important;
+}
+.cmp_form.cmp_form.login .fields .buttons a,
+.cmp_form.cmp_form.login .fields .buttons button,
+.cmp_form.register .fields .buttons a,
+.cmp_form.register .fields .buttons button {
+  font-size: 14px !important;
+  border-radius: 8px !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+.cmp_form.cmp_form.login .fields .buttons a,
+.cmp_form.register .fields .buttons a {
+  background-color: #fff !important;
+  color: #005424 !important;
+  border: 1px solid #005424;
+  transition: all 300ms;
+  padding: 5px 16px !important;
+}
+.cmp_form.cmp_form.login .fields .buttons a:hover,
+.cmp_form.register .fields .buttons a:hover {
+  background-color: #005424 !important;
+  color: #fff !important;
+}
+.cmp_form.cmp_form.login .fields .buttons button,
+.cmp_form.register .fields .buttons button {
+  padding: 6px 16px !important;
+  background-color: #005424 !important;
+  color: #fff !important;
+}
+
+.cmp_form.register {
+  padding-bottom: 70px !important;
+}
+.cmp_form.register .buttons {
+  float: right;
+  display: flex !important;
+}
+.cmp_form.register .buttons a,
+.cmp_form.register .buttons button {
+  display: block !important;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+  font-size: 14px !important;
+  border-radius: 8px !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+.cmp_form.register .buttons a {
+  background-color: #fff !important;
+  color: #005424 !important;
+  border: 1px solid #005424;
+  transition: all 300ms;
+  padding: 6px 16px !important;
+}
+.cmp_form.register .buttons a:hover {
+  background-color: #005424 !important;
+  color: #fff !important;
+}
+.cmp_form.register .buttons button {
+  padding: 6px 16px !important;
+  background-color: #005424 !important;
+  color: #fff !important;
+}
+
+.block_make_submission_link {
+  transition: transform 0.2s ease-in-out;
+}
+
+.block_make_submission_link:hover {
+  transform: scale(1.04);
+}
+
+.pkp_structure_content.has_sidebar {
+  background-color: #fff !important;
+}
+
+.pkp_structure_main {
+  border: none !important;
+  padding: 0 !important;
+}
+
+.pkp_structure_head {
+  background: transparent !important;
+  border-bottom: none !important;
+}
+
+.pkp_head_wrapper {
+  background-color: #005424;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.pkp_structure_sidebar.left {
+  box-shadow: 0px 1px 4px 0px rgb(221, 221, 221) !important;
+  border-radius: 8px !important;
+}
+
+.pkp_block.block_make_submission .content .block_make_submission_link {
+  background-color: #005424 !important;
+  color: #fff !important;
+  border-radius: 8px !important;
+  width: 100% !important;
+  padding: 8px 16px !important;
+  text-align: center !important;
+  font-weight: 500 !important;
+}
+
+.cmp_article_list.articles li {
+  margin-bottom: 14px !important;
+}
+.cmp_article_list.articles li .obj_article_summary {
+  padding: 18px;
+  border-radius: 8px;
+  box-shadow: 0px 1px 4px 0px rgb(221, 221, 221);
+}
+.cmp_article_list.articles li .obj_article_summary .title a {
+  font-size: 16px !important;
+  color: #005424 !important;
+  font-weight: 600 !important;
+}
+.cmp_article_list.articles li .obj_article_summary .galleys_links li a {
+  border: 1px solid #005424 !important;
+  color: #005424 !important;
+  text-transform: uppercase !important;
+  transition: all 300ms !important;
+}
+.cmp_article_list.articles li .obj_article_summary .galleys_links li a:hover {
+  background-color: #005424 !important;
+  color: #fff !important;
+}
+
+.issues_archive li .obj_issue_summary .cover {
+  width: 80px !important;
+}
+.issues_archive li .obj_issue_summary h2 .title {
+  font-size: 20px !important;
+  color: #005424 !important;
+}
+.issues_archive li .obj_issue_summary h2 .series {
+  font-size: 16px !important;
+  margin-top: 10px !important;
+}
+.issues_archive li .obj_issue_summary .description {
+  display: none !important;
+}
+
+.pkp_page_index .current_issue .read_more {
+  color: #005424 !important;
+}
+
+.current_issue .current_issue_title {
+  font-size: 18px !important;
+}
+
+.pkp_block.block_custom {
+  padding: 1.23rem !important;
+}
+.pkp_block.block_custom .content .sidebar__title {
+  background-color: transparent !important;
+  color: #333 !important;
+  border-left: 2px solid #005424 !important;
+  padding-left: 10px !important;
+  font-weight: 600 !important;
+}
+.pkp_block.block_custom .content .sidebar__nav ul li {
+  padding: 3px 0 !important;
+}
+.pkp_block.block_custom .content .sidebar__nav ul li a {
+  text-align: start !important;
+  border-radius: 8px !important;
+  width: 100% !important;
+  height: 100% !important;
+  box-shadow: inset 0 0 0 0 #005424;
+  background-color: #f2f8ee !important;
+  padding: 8px 14px !important;
+  color: #005424 !important;
+  font-weight: 600 !important;
+  transition: color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+}
+.pkp_block.block_custom .content .sidebar__nav ul li a:hover {
+  color: #fff !important;
+  box-shadow: inset 1000px 0 0 0 #005424;
+}
+.pkp_block.block_custom .ojs-brand__container {
+  width: 100%;
+  padding: 20px !important;
+}
+.pkp_block.block_custom .ojs-brand__container img {
+  width: 100% !important;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+}
+.pkp_block.block_custom .indexing__container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(1, minmax(0, 1fr));
+  gap: 8px;
+  gap: 4px 8px !important;
+}
+.pkp_block.block_custom .indexing__container a img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.pkp_block.block_custom .visitor-img {
+  width: 100% !important;
+  display: block !important;
+}
+.pkp_block.block_custom .visitor-img img {
+  width: 100%;
+}
+
+.obj_article_details .main_entry,
+.obj_article_details .entry_details {
+  width: 100% !important;
+  padding: 0 15px !important;
+  border: none !important;
+}
+.obj_article_details .main_entry div,
+.obj_article_details .entry_details div {
+  border: none !important;
+}
+
+@media (min-width: 992px) {
+  .pkp_block {
+    padding: 1.23rem !important;
+  }
+  .pkp_navigation_user.pkp_nav_list,
+  .pkp_navigation_primary_wrapper {
+    padding: 5px 30px !important;
+  }
+  .pkp_structure_main {
+    padding-right: 40px !important;
+    text-align: justify !important;
+  }
+  .pkp_navigation_user.pkp_nav_list {
+    position: static !important;
+    margin-top: 10px;
+  }
+  .pkp_navigation_user.pkp_nav_list .profile a {
+    color: #fff !important;
+    font-weight: 600 !important;
+  }
+  .pkp_site_name {
+    margin-top: 0px !important;
+  }
+  .pkp_site_name a {
+    overflow: hidden !important;
+    pointer-events: none !important;
+  }
+  .pkp_site_name img {
+    max-width: 100% !important;
+    max-height: 100% !important;
+  }
+  .pkp_structure_content.has_sidebar {
+    padding: 50px 20px 20px 20px !important;
+    display: flex !important;
+    gap: 15px !important;
+  }
+  .homepage_about {
+    padding-top: 0 !important;
+  }
+  #pkpDropdown1 {
+    border-radius: 6px !important;
+  }
+  #navigationUser {
+    padding-top: 20px !important;
+    padding-right: 40px !important;
+  }
+  .pkp_navigation_user_wrapper .pkp_navigation_user.pkp_nav_list .profile a {
+    background-color: #c8ecd7 !important;
+    padding: 6px 10px !important;
+    color: #005424 !important;
+  }
+  .pkp_navigation_user_wrapper .pkp_navigation_user.pkp_nav_list .profile a:hover {
+    border-left: 4px solid #005424 !important;
+  }
+  .pkp_navigation_primary.pkp_nav_list li a {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+  }
+  .pkp_navigation_primary.pkp_nav_list .dropdown-menu {
+    padding: 14px 16px !important;
+    border-radius: 8px !important;
+  }
+  .pkp_navigation_primary.pkp_nav_list .dropdown-menu li a {
+    color: #333 !important;
+    border-left: none !important;
+    transition: all 300ms !important;
+  }
+  .pkp_navigation_primary.pkp_nav_list .dropdown-menu li a:hover {
+    background-color: #c8ecd7 !important;
+    color: #005424 !important;
+  }
+  .pkp_structure_footer_wrapper {
+    background-color: transparent !important;
+  }
+  .pkp_structure_footer {
+    background-color: #ddd !important;
+  }
+}
+@media (min-width: 768px) {
+  .obj_article_details .main_entry {
+    padding: 0 !important;
+  }
+  .obj_article_details .entry_details {
+    padding: 0 15px !important;
+  }
+  .obj_article_details .page_title {
+    border-bottom: 1px solid #ddd !important;
+    padding-bottom: 30px !important;
+  }
+  .obj_article_details .row {
+    border-top: none !important;
+    border-bottom: none;
+  }
+  .pkp_structure_main:before,
+  .pkp_structure_main:after {
+    background-color: #fff !important;
+  }
+}/*# sourceMappingURL=style.css.map */

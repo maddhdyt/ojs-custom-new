@@ -1,0 +1,563 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap');
+$primary: #A56600;
+$main: 'EB Garamond', serif;
+
+@mixin flex($align, $justify) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin grid($col, $row, $gap) {
+    display: grid;
+    grid-template-columns: repeat($col, minmax(0, 1fr));
+    grid-template-rows: repeat($row, minmax(0, 1fr));
+    gap: $gap;
+}
+
+@mixin col_span($span_num) {
+    grid-column: span $span_num / span $span_num;
+}
+
+@mixin img_fit() {
+    overflow: hidden;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@mixin full() {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: $main !important;
+    background: url('https://ik.imagekit.io/arkapublisher/jurnal/image%2049%20(1).png?updatedAt=1698052665850');
+    background-size: 20%;
+    background-repeat: repeat;
+    min-height: 100vh !important;
+}
+
+.pkp_page_index .journals {
+    display: none;
+}
+
+// login container mobile
+.cmp_form .fields>div {
+    padding-bottom: 0 !important;
+}
+
+.pkp_structure_main {
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 30px !important;
+    margin-bottom: 100px !important;
+    background-color: #fff !important;
+    padding: 30px 30px 30px 30px !important;
+    border-radius: 8px !important;
+    box-shadow: 0px 0px 8px 2px #DDD;
+
+    // register custom
+    .page.page_register {
+        width: 100% !important;
+        padding-top: 10px;
+
+        h1 {
+            font-size: 32px !important;
+            font-weight: 600 !important;
+            text-transform: uppercase;
+            color: $primary !important;
+            font-family: $main !important;
+        }
+
+        .cmp_breadcrumbs {
+            margin-bottom: 30px !important;
+
+            ol {
+                padding: 0 !important;
+                margin-bottom: 0 !important;
+                border-left: 1px solid $primary !important;
+                padding-left: 10px !important;
+
+                li {
+                    a {
+                        color: $primary !important;
+                    }
+                }
+            }
+        }
+
+        .cmp_form.register {
+            max-width: 100% !important;
+
+            fieldset {
+                .fields {
+                    .country {
+                        margin-bottom: 20px !important;
+
+                        label {
+                            span {
+                                font-size: 14px !important;
+                                font-weight: 600 !important;
+                                font-style: normal !important;
+                                margin-bottom: 10px !important;
+                                color: #444 !important;
+                            }
+
+                            select {
+                                max-width: 100% !important;
+                                height: 45px !important;
+                                border-radius: 8px !important;
+                                border: 1px solid transparent !important;
+                                background-color: #d1a05020;
+                                outline: none !important;
+                                font-family: $main !important;
+                                color: #444 !important;
+                                transition: all 300ms !important;
+
+                                &:focus {
+                                    border: 1px solid $primary !important;
+                                }
+                            }
+                        }
+                    }
+
+                    .given_name,
+                    .family_name,
+                    .affiliation,
+                    .email,
+                    .username,
+                    .password {
+                        margin-bottom: 20px !important;
+
+                        label {
+                            span {
+                                font-size: 14px !important;
+                                font-weight: 600 !important;
+                                font-style: normal !important;
+                                margin-bottom: 10px !important;
+                                color: #444 !important;
+                            }
+
+                            input {
+                                max-width: 100% !important;
+                                padding: 8px 18px !important;
+                                border-radius: 8px !important;
+                                height: auto !important;
+                                border: 1px solid transparent !important;
+                                background-color: #d1a05020;
+                                outline: none !important;
+                                font-family: $main !important;
+                                color: #444 !important;
+                                transition: all 300ms;
+
+                                &:focus {
+                                    border: 1px solid $primary !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .buttons {
+                margin-top: 30px !important;
+                display: flex !important;
+                justify-content: end !important;
+                gap: 5px !important;
+
+                button {
+                    display: flex !important;
+                    align-items: center !important;
+                    justify-content: center !important;
+                    height: 45px !important;
+                    padding: 0px 20px !important;
+                    padding-bottom: 4px !important;
+                    border-radius: 8px !important;
+                    background-color: $primary !important;
+                    color: #fff !important;
+                    border: none !important;
+                    font-family: $main !important;
+                    font-size: 14px !important;
+                    font-weight: 500 !important;
+                    cursor: pointer !important;
+                    order: 2 !important;
+                }
+
+                a {
+                    width: fit-content !important;
+                    display: flex !important;
+                    align-items: center !important;
+                    justify-content: center !important;
+                    height: 45px !important;
+                    padding: 0px 20px !important;
+                    padding-bottom: 4px !important;
+                    border-radius: 8px !important;
+                    background-color: #fff !important;
+                    color: $primary !important;
+                    text-decoration: none !important;
+                    font-size: 14px !important;
+                    font-weight: 500 !important;
+                    cursor: pointer !important;
+                    transition: all 300ms;
+
+                    &:hover {
+                        background-color: $primary !important;
+                        color: #fff !important;
+                    }
+                }
+            }
+        }
+
+        .reviewer_nocontext_interests {
+            margin-bottom: 20px !important;
+
+            label {
+                span {
+                    font-size: 14px !important;
+                    font-weight: 600 !important;
+                    font-style: normal !important;
+                    margin-bottom: 10px !important;
+                    color: #444 !important;
+                }
+
+                input {
+                    max-width: 100% !important;
+                    padding: 8px 18px !important;
+                    border-radius: 8px !important;
+                    height: auto !important;
+                    border: 1px solid transparent !important;
+                    background-color: #d1a05020;
+                    outline: none !important;
+                    font-family: $main !important;
+                    color: #444 !important;
+                    transition: all 300ms;
+
+                    &:focus {
+                        border: 1px solid $primary !important;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .page.page_login {
+        width: 100% !important;
+        padding-top: 10px !important;
+
+        h1 {
+            font-size: 32px !important;
+            font-weight: 600 !important;
+            text-transform: uppercase;
+            color: $primary !important;
+            font-family: $main !important;
+        }
+
+        .cmp_breadcrumbs {
+            margin-bottom: 30px !important;
+
+            ol {
+                padding: 0 !important;
+                margin-bottom: 0 !important;
+                border-left: 1px solid $primary !important;
+                padding-left: 10px !important;
+
+                li {
+                    a {
+                        color: $primary !important;
+                    }
+                }
+            }
+        }
+
+        // form login
+        .cmp_form.cmp_form.login {
+            max-width: 100% !important;
+
+            .fields {
+                .username {
+                    margin-bottom: 20px !important;
+
+                    label {
+                        span {
+                            font-size: 16px !important;
+                            font-weight: 600 !important;
+                            font-style: normal !important;
+                            margin-bottom: 10px !important;
+                            color: #444 !important;
+                        }
+
+                        input {
+                            max-width: 100% !important;
+                            padding: 10px 20px !important;
+                            border-radius: 8px !important;
+                            height: auto !important;
+                            border: 1px solid transparent !important;
+                            background-color: #d1a05020;
+                            outline: none !important;
+                            font-family: $main !important;
+                            color: #444 !important;
+
+                            &:focus {
+                                border: 1px solid $primary !important;
+                            }
+                        }
+                    }
+                }
+
+                .password {
+                    margin-bottom: 15px !important;
+
+                    label {
+                        span {
+                            font-size: 16px !important;
+                            font-weight: 600 !important;
+                            font-style: normal !important;
+                            margin-bottom: 10px !important;
+                            color: #444 !important;
+                        }
+
+                        input {
+                            max-width: 100% !important;
+                            padding: 10px 20px !important;
+                            border-radius: 8px !important;
+                            height: auto !important;
+                            border: 1px solid transparent !important;
+                            background-color: #d1a05020;
+                            outline: none !important;
+                            font-family: $main !important;
+                            color: #444 !important;
+
+                            &:focus {
+                                border: 1px solid $primary !important;
+                            }
+                        }
+
+                        a {
+                            display: block !important;
+                            float: right !important;
+                            margin-top: 15px !important;
+                        }
+                    }
+                }
+            }
+
+            .buttons {
+                margin-top: 30px !important;
+
+                button {
+                    display: flex !important;
+                    align-items: center !important;
+                    justify-content: center !important;
+                    height: 45px !important;
+                    padding: 0px 20px !important;
+                    padding-bottom: 4px !important;
+                    border-radius: 8px !important;
+                    background-color: $primary !important;
+                    color: #fff !important;
+                    border: none !important;
+                    font-family: $main !important;
+                    font-size: 14px !important;
+                    font-weight: 500 !important;
+                    cursor: pointer !important;
+                }
+
+                a {
+                    display: flex !important;
+                    align-items: center !important;
+                    justify-content: center !important;
+                    height: 45px !important;
+                    padding: 0px 20px !important;
+                    padding-bottom: 4px !important;
+                    border-radius: 8px !important;
+                    background-color: #fff !important;
+                    color: $primary !important;
+                    text-decoration: none !important;
+                    font-size: 14px !important;
+                    font-weight: 500 !important;
+                    transition: all 300ms;
+                    cursor: pointer !important;
+
+                    &:hover {
+                        background-color: $primary !important;
+                        color: #fff !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// login container end
+
+.pkp_structure_main:before,
+.pkp_structure_main:after {
+    background: transparent !important;
+}
+
+// Home custom
+.journal__list__container {
+    @include grid(1, 1, 20px);
+    margin-top: 30px;
+
+    .box__journal {
+        padding: 20px;
+        border-radius: 8px;
+        // box-shadow: 0px 0px 4px 0px #DDD;
+        @include grid(3, 1, 0px);
+
+        .journal__cover {
+            display: block;
+            @include col_span(1);
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .journal__description {
+            @include col_span(2);
+            padding-left: 20px !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            header {
+                a {
+                    font-size: 16px;
+                    text-decoration: none;
+                    color: $primary;
+                    font-weight: 700;
+                    letter-spacing: 0.42px;
+                    text-transform: uppercase;
+                }
+
+                p {
+                    text-align: justify;
+                    font-size: 12px;
+                    color: #444;
+                    margin-top: 16px;
+                    letter-spacing: 0.2px;
+                    line-height: 1.50 !important;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 5;
+                    /* number of lines to show */
+                    line-clamp: 5;
+                    -webkit-box-orient: vertical;
+                }
+            }
+
+            footer {
+                display: flex;
+                gap: 10px;
+                justify-content: end;
+
+                .btn {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    color: #fff !important;
+                    background-color: $primary;
+                    padding: 8px 18px !important;
+                    border-radius: 8px;
+                    text-decoration: none;
+                    width: fit-content;
+                    font-size: 12px;
+                }
+            }
+
+        }
+    }
+}
+
+// Desktop
+@media (min-width: 742px) {
+
+    // Home Custom
+    .journal__list__container {
+        @include grid(2, 1, 20px);
+    }
+
+    // Header Custom Desktop
+    .pkp_structure_head {
+        background-color: #fff !important;
+        height: 120px !important;
+        border: none !important;
+        box-shadow: 0px 0px 8px 2px #DDD;
+        position: fixed !important;
+        z-index: 999 !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+    }
+
+    .pkp_head_wrapper {
+        padding-top: 0px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        height: 100% !important;
+    }
+
+    .pkp_site_nav_menu {
+        width: fit-content !important;
+        background-color: transparent !important;
+
+        .pkp_navigation_primary_row {
+            display: none !important;
+        }
+
+        .pkp_navigation_user_wrapper {
+            position: static !important;
+            top: 0;
+            left: 0% !important;
+            transform: translateX(0%) !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            text-align: start !important;
+            padding-top: 0;
+            margin-top: 0;
+            width: fit-content !important;
+            border-top: none;
+            z-index: 1000;
+            background-color: transparent !important;
+            z-index: 0 !important;
+        }
+    }
+
+    // nav menu
+    .pkp_navigation_user.pkp_nav_list {
+        width: fit-content !important;
+        display: flex !important;
+        gap: 10px !important;
+
+        .profile {
+            a {
+                padding: 10px 20px !important;
+                background-color: $primary !important;
+                color: #fff !important;
+                font-size: 14px !important;
+                border-radius: 8px !important;
+            }
+        }
+    }
+
+    .pkp_site_name {
+        position: static !important;
+        width: fit-content !important;
+    }
+
+    // login container
+    .pkp_structure_main {
+        margin-top: 140px !important;
+    }
+}

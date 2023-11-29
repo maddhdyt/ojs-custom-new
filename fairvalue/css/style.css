@@ -1,11 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900&display=swap");
 body {
   overflow-x: hidden !important;
-  background-image: url("https://ik.imagekit.io/arkapublisher/jurnal/background-fairvalue.png?updatedAt=1701052465127");
+  background-image: url("https://ik.imagekit.io/arkapublisher/jurnal/imgonline-com-ua-ReplaceColor-omLSXhCRwgGMR.jpg?updatedAt=1701148204142");
   background-repeat: repeat;
   background-attachment: fixed;
-  background-size: 35%;
+  background-size: 30%;
+  text-align: justify;
+  font-family: "Nunito Sans", sans-serif;
 }
 
+.pkp_form.login .form-group input {
+  border-radius: 12px !important;
+}
+.pkp_form.login .buttons {
+  display: flex !important;
+  justify-content: flex-end;
+  gap: 20px;
+}
+.pkp_form.login .buttons button {
+  order: 2;
+  background-color: #FFC700;
+  color: #222;
+  border: none !important;
+  border-radius: 12px;
+}
+.pkp_form.login .buttons a {
+  background-color: #FDF8CC;
+  color: #222;
+  transition: all 400ms;
+  border: none;
+  border-radius: 12px;
+}
+.pkp_form.login .buttons a:hover {
+  background-color: #FFC700;
+}
+
+.pkp_form.register fieldset .fields .form-group {
+  width: 100%;
+}
+.pkp_form.register fieldset .fields .form-group label {
+  width: 100%;
+}
+.pkp_form.register fieldset .fields .form-group label input, .pkp_form.register fieldset .fields .form-group label select {
+  width: 100%;
+  border-radius: 12px;
+}
+.pkp_form.register .reviewer .fields .form-group.optin label {
+  display: flex !important;
+  gap: 4px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.pkp_form.register .reviewer .fields .form-group.optin label input {
+  width: 14px !important;
+  aspect-ratio: 1/1;
+}
+.pkp_form.register .buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: end;
+}
+.pkp_form.register .buttons button {
+  order: 2;
+  background-color: #FFC700;
+  color: #222;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+}
+.pkp_form.register .buttons a {
+  background-color: #FDF8CC;
+  color: #222;
+  font-weight: 600;
+  transition: all 400ms;
+  border: none;
+  border-radius: 12px;
+}
+.pkp_form.register .buttons a:hover {
+  background-color: #FFC700;
+}
+
+.additional__title {
+  font-size: 24px !important;
+  color: #222;
+  font-weight: 600;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.additional__header {
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-rows: repeat(1, minmax(0, 1fr));
+  gap: 20px;
+}
+.additional__header .about {
+  order: 2;
+}
+.additional__header .cover {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.additional_indexing_container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(1, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+@media (min-width: 746px) {
+  .additional__header {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+    gap: 20px;
+  }
+  .additional__header .about {
+    padding-top: 10px;
+    grid-column: span 2/span 2;
+  }
+  .additional__header .cover {
+    width: 100%;
+    order: 2 !important;
+  }
+  .additional_indexing_container {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+  }
+}
 .indexing__container {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -65,6 +192,7 @@ body {
   padding: 40px 20px !important;
   background-color: #fff !important;
   overflow-x: hidden !important;
+  box-shadow: 0px 0px 4px 0px #ddd;
 }
 
 /* Header Custom */
@@ -133,6 +261,18 @@ body {
   margin-top: 24px;
   font-weight: 600;
 }
+.pkp_block.block_custom .content .sidebar__container .issue__journal-expand {
+  display: block;
+  margin-top: 15px;
+  color: #222;
+  background-color: #FFC700;
+  border-radius: 8px;
+  padding: 8px 12px;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-self: flex-end;
+  font-size: 14px;
+}
 .pkp_block.block_custom .content .sidebar__container .indexing__group {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -195,11 +335,29 @@ body {
   border-radius: 8px !important;
   border: none;
   overflow: hidden;
-  box-shadow: 0px 0px 4px 0px #eaeaea;
+  box-shadow: 0px 0px 6px 0px #eaeaea;
   border: 1px solid #eaeaea;
 }
 
+.current_issue .page-header h2 {
+  font-size: 24px !important;
+  font-weight: 600;
+  color: #222;
+  font-family: "Nunito Sans", sans-serif;
+}
+.current_issue .current_issue_title.lead {
+  font-size: 20px;
+  font-weight: 600;
+  color: #444;
+}
+
 /* Article List Custom Css */
+.sections .section .page-header h2 small {
+  font-size: 24px;
+  font-weight: 600;
+  color: #222;
+}
+
 .issue-details .description p {
   text-align: justify !important;
 }
@@ -224,7 +382,7 @@ body {
   background-color: #FFC700 !important;
   color: #222;
   border: none !important;
-  border-radius: 4px;
+  border-radius: 12px;
   margin-bottom: 50px;
   float: right;
 }
@@ -236,11 +394,10 @@ body {
 
 .media-list .breadcrumb {
   margin-top: 10px !important;
-  border-radius: 8px;
+  border-radius: 12px;
   background-color: #fff;
-  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-ring-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-shadow);
+  box-shadow: 0px 0px 4px 0px #eaeaea;
+  border: 1px solid #eaeaea;
 }
 
 .panel.panel-default.issue {
@@ -254,14 +411,14 @@ body {
 }
 
 .panel.panel-default.issue .panel-heading {
-  background-color: #f8d29d;
-  color: #9f3a07;
+  background-color: #FDF8CC;
+  color: #BD7100 !important;
   font-weight: 600;
 }
 
 .list-group-item.date-published {
-  background-color: #f8d29d;
-  color: #9f3a07;
+  background-color: #FDF8CC;
+  color: #BD7100;
   font-weight: 600;
   border: none;
   border-bottom: 1px solid #ddd;
@@ -307,8 +464,8 @@ body {
 }
 
 .panel.panel-default.section .panel-heading {
-  background-color: #f8d29d;
-  color: #9f3a07;
+  background-color: #FDF8CC;
+  color: #BD7100;
   font-weight: 600;
 }
 
@@ -330,7 +487,7 @@ body {
 
 /* Navigation */
 .cmp_breadcrumbs .breadcrumb li a {
-  color: #9f3a07 !important;
+  color: #BD7100 !important;
 }
 
 /* Footer */
@@ -339,27 +496,75 @@ footer .container {
 }
 
 footer {
-  margin: 0 auto !important;
   background-color: #444 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+footer .container .row .col-md-10 {
+  width: 100%;
+}
+footer .container .row .col-md-2 {
+  display: none;
+}
+footer .container .row .col-md-2 a .img-responsive {
+  filter: brightness(0) invert(1);
 }
 
-footer .container .row .col-md-10 > center {
-  color: #fff !important;
+.footer__content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(1, minmax(0, 1fr));
+  gap: 20px;
+  padding: 40px 0px;
 }
-
-footer .container .row .col-md-10 center > a {
-  color: #ffd500 !important;
+.footer__content .footer__identity {
+  display: flex;
+  gap: 40px;
 }
-
-footer .container .row .col-md-10 center p > a {
-  color: #ffd500 !important;
+.footer__content .footer__identity .info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
-
-footer .container .row .col-md-2 .img-responsive {
-  /* Safari/Chrome */
+.footer__content .footer__identity .info h6 {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600 !important;
+}
+.footer__content .footer__identity .info p {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 400 !important;
+}
+.footer__content .footer__ojs {
   filter: invert(100%);
-  position: absolute !important;
-  width: 100px !important;
+}
+.footer__content .footer__ojs img {
+  float: right;
+  width: 150px;
+}
+
+.footer-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+  width: 100%;
+}
+.footer-copy a {
+  color: #fff;
+  text-decoration: underline;
+}
+.footer-copy a img {
+  width: 100px;
+  margin-bottom: 20px;
+}
+.footer-copy p {
+  font-size: 12px;
+  color: #fff;
 }
 
 @media (min-width: 547px) {

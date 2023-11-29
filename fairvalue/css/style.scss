@@ -1,6 +1,7 @@
 // my custom css
 $primary : #FFC700;
 $secondary : #FDF8CC;
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900&display=swap');
 
 @mixin flex($align, $justify) {
     display: flex;
@@ -15,12 +16,147 @@ $secondary : #FDF8CC;
     gap: $gap;
 }
 
+@mixin col_span($span_num) {
+    grid-column: span $span_num / span $span_num;
+}
+
 body {
     overflow-x: hidden !important;
-    background-image: url('https://ik.imagekit.io/arkapublisher/jurnal/background-fairvalue.png?updatedAt=1701052465127');
+    background-image: url('https://ik.imagekit.io/arkapublisher/jurnal/imgonline-com-ua-ReplaceColor-omLSXhCRwgGMR.jpg?updatedAt=1701148204142');
     background-repeat: repeat;
     background-attachment: fixed;
-    background-size: 35%;
+    background-size: 30%;
+    text-align: justify;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.pkp_form.login {
+    .form-group {
+        input {
+            border-radius: 12px !important;
+        }
+    }
+    .buttons {
+        display: flex !important;
+        justify-content: flex-end;
+        gap: 20px;
+        button {
+            order: 2;
+            background-color: $primary;
+            color: #222;
+            border: none !important;
+            border-radius: 12px;
+        }
+        a {
+            background-color: $secondary;
+            color: #222;
+            transition: all 400ms;
+            border: none;
+            border-radius: 12px;
+            &:hover {
+                background-color: $primary;
+            }
+        }
+    }
+}
+
+.pkp_form.register {
+    fieldset {
+        .fields {
+            .form-group {
+                width: 100%;
+                label {
+                    width: 100%;
+                    input, select {
+                        width: 100%;
+                        border-radius: 12px;
+                    }
+                }
+            }
+        }
+    }
+    .reviewer {
+        .fields {
+            .form-group.optin {
+                label {
+                    display: flex !important;
+                    gap: 4px;
+                    width: fit-content;
+                    input {
+                        width: 14px !important;
+                        aspect-ratio: 1/1;
+                    }
+                }
+            }
+        }
+    }
+
+    .buttons {
+        display: flex;
+        gap: 10px;
+        justify-content: end;
+        button {
+            order: 2;
+            background-color: $primary;
+            color: #222;
+            font-weight: 600;
+            border-radius: 12px;
+            border: none;
+        }
+        a {
+            background-color: $secondary;
+            color: #222;
+            font-weight: 600;
+            transition: all 400ms;
+            border: none;
+            border-radius: 12px;
+            &:hover {
+                background-color: $primary;
+            }
+        }
+    }
+}
+
+
+// Additional Content Style
+.additional__title {
+    font-size: 24px !important;
+    color: #222;
+    font-weight: 600;
+    font-family: 'Nunito Sans', sans-serif;
+}
+.additional__header {
+    margin-bottom: 40px;
+    @include grid(1, 1, 20px);
+    .about{
+        order: 2;
+    }
+    .cover {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+.additional_indexing_container {
+    @include grid(3, 1, 10px);
+    margin-top: 20px;
+}
+
+@media (min-width: 746px) {
+    .additional__header {
+        @include grid(3, 1, 20px);
+        .about {
+            padding-top: 10px;
+            @include col_span(2);
+        }
+        .cover {
+            width: 100%;
+            order: 2 !important;
+        }
+    }
+    .additional_indexing_container {
+        @include grid(5, 1, 10px);
+        margin-top: 20px;
+    }
 }
 
 .indexing__container {
@@ -85,6 +221,7 @@ body {
     padding: 40px 20px !important;
     background-color: #fff !important;
     overflow-x: hidden !important;
+    box-shadow: 0px 0px 4px 0px #ddd;
 }
 
 /* Header Custom */
@@ -144,20 +281,36 @@ body {
     overflow: hidden;
     margin-top: 10px;
     padding: 15px 20px;
+
     .ojs-logo {
         display: block;
         margin-top: 14px;
     }
+
     .menu__title {
         font-size: 16px;
         color: #222;
         margin-top: 24px;
         font-weight: 600;
     }
+
+    .issue__journal-expand {
+        display: block;
+        margin-top: 15px;
+        color: #222;
+        background-color: $primary;
+        border-radius: 8px;
+        padding: 8px 12px;
+        width: fit-content;
+        align-self: flex-end;
+        font-size: 14px;
+    }
+
     .indexing__group {
         @include grid(2, 1, 6px);
         margin-top: 10px;
     }
+
     .submissions__btn {
         border-radius: 8px;
         background-color: $primary;
@@ -170,21 +323,26 @@ body {
         display: block;
         text-decoration: none;
     }
+
     .certificate__group {
         display: flex;
         flex-direction: column;
         margin-top: 15px;
         gap: 10px;
+
         a {
             border-radius: 8px;
             overflow: hidden;
         }
     }
+
     .menu__group {
         display: flex;
         flex-direction: column;
+        // align-items: end;
         gap: 5px;
         margin-top: 10px;
+
         .menu__link {
             display: block;
             width: 100%;
@@ -196,11 +354,13 @@ body {
             transition: all 300ms;
             font-size: 14px !important;
             text-align: center;
+
             &:hover {
                 background-color: $primary;
             }
         }
     }
+
     .sponsored__group {
         @include grid(2, 1, 10px);
         margin-top: 14px;
@@ -211,11 +371,42 @@ body {
     border-radius: 8px !important;
     border: none;
     overflow: hidden;
-    box-shadow: 0px 0px 4px 0px #eaeaea;
+    box-shadow: 0px 0px 6px 0px #eaeaea;
     border: 1px solid #eaeaea;
 }
 
+
+// Current Issue
+.current_issue {
+    .page-header {
+        h2 {
+            font-size: 24px !important;
+            font-weight: 600;
+            color: #222;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+    }
+    .current_issue_title.lead {
+        font-size: 20px;
+        font-weight: 600;
+        color: #444;
+    }
+}
+
 /* Article List Custom Css */
+.sections {
+    .section {
+        .page-header {
+            h2 {
+                small {
+                    font-size: 24px;
+                    font-weight: 600;
+                    color: #222;
+                }
+            }
+        }
+    }
+}
 .issue-details .description p {
     text-align: justify !important;
 }
@@ -240,7 +431,7 @@ body {
     background-color: $primary !important;
     color: #222;
     border: none !important;
-    border-radius: 4px;
+    border-radius: 12px;
     margin-bottom: 50px;
     float: right;
 }
@@ -252,11 +443,10 @@ body {
 
 .media-list .breadcrumb {
     margin-top: 10px !important;
-    border-radius: 8px;
+    border-radius: 12px;
     background-color: #fff;
-    --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    box-shadow: 0px 0px 4px 0px #eaeaea;
+    border: 1px solid #eaeaea;
 }
 
 .panel.panel-default.issue {
@@ -270,14 +460,14 @@ body {
 }
 
 .panel.panel-default.issue .panel-heading {
-    background-color: #f8d29d;
-    color: #9f3a07;
+    background-color: $secondary;
+    color: #BD7100 !important;
     font-weight: 600;
 }
 
 .list-group-item.date-published {
-    background-color: #f8d29d;
-    color: #9f3a07;
+    background-color: $secondary;
+    color: #BD7100;
     font-weight: 600;
     border: none;
     border-bottom: 1px solid #ddd;
@@ -323,8 +513,8 @@ body {
 }
 
 .panel.panel-default.section .panel-heading {
-    background-color: #f8d29d;
-    color: #9f3a07;
+    background-color: $secondary;
+    color: #BD7100;
     font-weight: 600;
 }
 
@@ -346,7 +536,7 @@ body {
 
 /* Navigation */
 .cmp_breadcrumbs .breadcrumb li a {
-    color: #9f3a07 !important;
+    color: #BD7100 !important;
 }
 
 /* Footer */
@@ -355,30 +545,83 @@ footer .container {
 }
 
 footer {
-    margin: 0 auto !important;
     background-color: #444 !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    .container {
+        .row {
+            .col-md-10 {
+                width: 100%;
+            }
+
+            .col-md-2 {
+                display: none;
+
+                a {
+                    .img-responsive {
+                        filter: brightness(0) invert(1);
+                    }
+                }
+            }
+        }
+    }
 }
 
-footer .container .row .col-md-10>center {
-    color: #fff !important;
+.footer__content {
+    @include grid(2, 1, 20px);
+    padding: 40px 0px;
+    .footer__identity {
+        display: flex;
+        gap: 40px;
+        .info {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            h6 {
+                font-size: 16px;
+                color: #fff;
+                font-weight: 600 !important;
+            }
+            p {
+                font-size: 14px;
+                color: #fff;
+                font-weight: 400 !important;
+            }
+        }
+    }
+    .footer__ojs {
+        filter: invert(100%);
+        img {
+            float: right;
+            width: 150px;
+        }
+    }
+}
+.footer-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+    width: 100%;
+    a {
+        color: #fff;
+        text-decoration: underline;
+        img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+    }
+
+    p {
+        font-size: 12px;
+        color: #fff;
+    }
 }
 
-
-footer .container .row .col-md-10 center>a {
-    color: #ffd500 !important;
-}
-
-footer .container .row .col-md-10 center p>a {
-    color: #ffd500 !important;
-}
-
-footer .container .row .col-md-2 .img-responsive {
-    -webkit-filter: invert(100%);
-    /* Safari/Chrome */
-    filter: invert(100%);
-    position: absolute !important;
-    width: 100px !important;
-}
 
 @media (min-width: 547px) {
 

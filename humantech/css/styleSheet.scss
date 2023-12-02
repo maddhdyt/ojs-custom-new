@@ -1,7 +1,8 @@
 // my custom css
-$primary : #FFC700;
-$secondary : #FDF8CC;
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900&display=swap');
+$primary : #1F4CA1;
+$secondary : #FFC700;
+$secondary-f : #FFC70020;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
 
 @mixin flex($align, $justify) {
     display: flex;
@@ -22,12 +23,12 @@ $secondary : #FDF8CC;
 
 body {
     overflow-x: hidden !important;
-    background-image: url('https://ik.imagekit.io/arkapublisher/jurnal/imgonline-com-ua-ReplaceColor-omLSXhCRwgGMR.jpg?updatedAt=1701148204142');
+    background-image: url('https://ik.imagekit.io/arkapublisher/jurnal/background%20humantech.png?updatedAt=1701332864589');
     background-repeat: repeat;
     background-attachment: fixed;
-    background-size: 30%;
+    background-size: 50%;
     text-align: justify;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Outfit', sans-serif;
 }
 
 body::before {
@@ -37,12 +38,69 @@ body::before {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: url('https://ik.imagekit.io/arkapublisher/jurnal/imgonline-com-ua-ReplaceColor-omLSXhCRwgGMR.jpg?updatedAt=1701148204142');
+    background-image: url('https://ik.imagekit.io/arkapublisher/jurnal/background%20humantech.png?updatedAt=1701332864589');
     background-repeat: repeat;
     background-size: 30%;
-    filter: invert(0.2);
-    z-index: -1; /* Ensure the pseudo-element is behind the content */
+    filter: invert(0.1);
+    z-index: -1;
+    /* Ensure the pseudo-element is behind the content */
 }
+
+// home custom
+.pkp_page_index .journal-description {
+    margin-top: 10px !important;
+}
+
+.additional_content {
+    p {
+        color: #333;
+        font-weight: 400 !important;
+    }
+}
+
+.home__description {
+    @include grid(7, 1, 20px);
+
+    .cover {
+        display: none;
+        @include col_span(2);
+        img {
+            width: 100%
+        }
+    }
+
+    .description {
+        @include col_span(7);
+    }
+}
+
+.home__indexing-group {
+    @include grid(5, 1, 10px);
+    margin-top: 20px;
+
+    img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 743px) {
+    .home__indexing-group {
+        @include grid(2, 1, 20px);
+    }
+
+    .home__description {
+        @include grid(1, 1, 20px);
+
+        .cover {
+            @include col_span(1);
+        }
+
+        .description {
+            @include col_span(1);
+        }
+    }
+}
+
 
 .pkp_form.login {
     .form-group {
@@ -50,25 +108,30 @@ body::before {
             border-radius: 12px !important;
         }
     }
+
     .buttons {
         display: flex !important;
         justify-content: flex-end;
-        gap: 20px;
+        gap: 10px;
+
         button {
             order: 2;
             background-color: $primary;
-            color: #222;
+            color: #fff;
             border: none !important;
             border-radius: 12px;
         }
+
         a {
-            background-color: $secondary;
+            display: none;
+            background-color: $secondary-f;
             color: #222;
             transition: all 400ms;
             border: none;
             border-radius: 12px;
+
             &:hover {
-                background-color: $primary;
+                background-color: $secondary;
             }
         }
     }
@@ -79,9 +142,12 @@ body::before {
         .fields {
             .form-group {
                 width: 100%;
+
                 label {
                     width: 100%;
-                    input, select {
+
+                    input,
+                    select {
                         width: 100%;
                         border-radius: 12px;
                     }
@@ -89,6 +155,7 @@ body::before {
             }
         }
     }
+
     .reviewer {
         .fields {
             .form-group.optin {
@@ -96,6 +163,7 @@ body::before {
                     display: flex !important;
                     gap: 4px;
                     width: fit-content;
+
                     input {
                         width: 14px !important;
                         aspect-ratio: 1/1;
@@ -109,23 +177,27 @@ body::before {
         display: flex;
         gap: 10px;
         justify-content: end;
+
         button {
             order: 2;
             background-color: $primary;
-            color: #222;
+            color: #fff;
             font-weight: 600;
             border-radius: 12px;
             border: none;
         }
+
         a {
-            background-color: $secondary;
+            display: none;
+            background-color: $secondary-f;
             color: #222;
             font-weight: 600;
             transition: all 400ms;
             border: none;
             border-radius: 12px;
+
             &:hover {
-                background-color: $primary;
+                background-color: $secondary;
             }
         }
     }
@@ -139,17 +211,21 @@ body::before {
     font-weight: 600;
     font-family: 'Nunito Sans', sans-serif;
 }
+
 .additional__header {
     margin-bottom: 40px;
     @include grid(1, 1, 20px);
-    .about{
+
+    .about {
         order: 2;
     }
+
     .cover {
         width: 50%;
         margin: 0 auto;
     }
 }
+
 .additional_indexing_container {
     @include grid(3, 1, 10px);
     margin-top: 20px;
@@ -158,15 +234,18 @@ body::before {
 @media (min-width: 746px) {
     .additional__header {
         @include grid(3, 1, 20px);
+
         .about {
             padding-top: 10px;
             @include col_span(2);
         }
+
         .cover {
             width: 100%;
             order: 2 !important;
         }
     }
+
     .additional_indexing_container {
         @include grid(5, 1, 10px);
         margin-top: 20px;
@@ -304,17 +383,21 @@ body::before {
     .menu__title {
         font-size: 16px;
         color: #222;
-        margin-top: 24px;
+        margin: 24px 0 20px 0 !important;
         font-weight: 600;
+        padding-left: 8px;
+        line-height: 18px;
+        border-left: 3px solid $primary;
     }
 
     .issue__journal-expand {
         display: block;
         margin-top: 15px;
-        color: #222;
+        color: #fff;
+        font-weight: 500;
         background-color: $primary;
         border-radius: 8px;
-        padding: 8px 12px;
+        padding: 8px 16px;
         width: fit-content;
         align-self: flex-end;
         text-decoration: none;
@@ -329,7 +412,7 @@ body::before {
     .submissions__btn {
         border-radius: 8px;
         background-color: $primary;
-        color: #222;
+        color: #fff;
         font-size: 14px;
         padding: 10px;
         font-weight: 500 !important;
@@ -363,7 +446,7 @@ body::before {
             width: 100%;
             padding: 8px 14px;
             border-radius: 8px;
-            background-color: $secondary;
+            background-color: $secondary-f;
             color: #222;
             text-decoration: none;
             transition: all 300ms;
@@ -371,7 +454,7 @@ body::before {
             text-align: center;
 
             &:hover {
-                background-color: $primary;
+                background-color: $secondary;
             }
         }
     }
@@ -392,23 +475,70 @@ body::before {
 
 
 // Current Issue
-.current_issue {
+.current_issue, .issue-toc {
     .page-header {
+        border-bottom: none !important;
+
         h2 {
             font-size: 24px !important;
             font-weight: 600;
             color: #222;
-            font-family: 'Nunito Sans', sans-serif;
+            font-family: 'Outfit', sans-serif;
+            padding-left: 8px;
+            border-left: 3px solid $primary;
         }
     }
+
     .current_issue_title.lead {
         font-size: 20px;
         font-weight: 600;
         color: #444;
     }
+
+    .sections .section .media-list {
+        display: flex;
+        flex-direction: column;
+        gap: 17px;
+
+        >div {
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 4px 0px #ddd;
+
+            .breadcrumb {
+                margin-bottom: 0px !important;
+                border-radius: 8px;
+                background-color: $secondary-f;
+                margin-top: 15px;
+                font-weight: 500;
+                color: #333;
+                font-size: 14px;
+                img {
+                    display: none !important;
+                }
+            }
+        }
+    }
 }
 
 /* Article List Custom Css */
+.issues.media-list {
+    .issue-summary.media {
+        .media-body {
+            .media-heading {
+                a {
+                    font-family: 'Outfit', sans-serif !important;
+                    font-weight: 600 !important;
+                    color: #222 !important;
+                }
+                div {
+                    font-family: 'Outfit', sans-serif !important;
+                }
+            }
+        }
+    }
+}
+
 .sections {
     .section {
         .page-header {
@@ -422,6 +552,7 @@ body::before {
         }
     }
 }
+
 .issue-details .description p {
     text-align: justify !important;
 }
@@ -444,24 +575,54 @@ body::before {
 
 .btn.btn-primary.read-more {
     background-color: $primary !important;
-    color: #222;
+    color: #fff;
     border: none !important;
     border-radius: 12px;
     margin-bottom: 50px;
+    margin-top: 20px;
     float: right;
+    span {
+        display: none;
+    }
 }
 
-.media-list a {
-    font-weight: 600 !important;
-    color: #BD7100;
+.media-list {
+    h4 {
+        margin-top: 0 !important;
+
+        a {
+            font-weight: 600 !important;
+            color: #222;
+            font-family: 'Outfit', sans-serif;
+            line-height: 28px;
+        }
+    }
+
+    .meta {
+        .authors {
+            font-weight: 400 !important;
+            color: #444 !important;
+            font-size: 14px;
+        }
+    }
 }
 
-.media-list .breadcrumb {
-    margin-top: 10px !important;
-    border-radius: 12px;
-    background-color: #fff;
-    box-shadow: 0px 0px 4px 0px #eaeaea;
-    border: 1px solid #eaeaea;
+// Article Detail Custom
+.page.page_article {
+    .cmp_breadcrumbs {
+        text-align: start !important;
+    }
+    .article-details {
+        header {
+            h1 {
+                font-size: 24px;
+                color: #222;
+                font-weight: 600;
+                font-family: 'Outfit', sans-serif;
+                line-height: 32px;
+            }
+        }
+    }
 }
 
 .panel.panel-default.issue {
@@ -474,15 +635,22 @@ body::before {
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.panel.panel-default.issue .panel-heading {
-    background-color: $secondary;
-    color: #BD7100 !important;
-    font-weight: 600;
-}
+.panel.panel-default.issue {
+    .panel-heading {
+        background-color: $primary;
+        color: #fff !important;
+        font-weight: 600;
+    }
+    .panel-body {
+        a {
+            text-align: start !important;
+        }
+    }
+} 
 
 .list-group-item.date-published {
-    background-color: $secondary;
-    color: #BD7100;
+    background-color: $primary;
+    color: #fff;
     font-weight: 600;
     border: none;
     border-bottom: 1px solid #ddd;
@@ -511,8 +679,8 @@ body::before {
 }
 
 .panel.panel-default.how-to-cite .panel-heading {
-    background-color: #f8d29d;
-    color: #9f3a07;
+    background-color: $primary;
+    color: #fff;
     font-weight: 600;
     border-radius: 4px 4px 0px 0px;
 }
@@ -528,8 +696,8 @@ body::before {
 }
 
 .panel.panel-default.section .panel-heading {
-    background-color: $secondary;
-    color: #BD7100;
+    background-color: $primary;
+    color: #fff;
     font-weight: 600;
 }
 
@@ -551,7 +719,7 @@ body::before {
 
 /* Navigation */
 .cmp_breadcrumbs .breadcrumb li a {
-    color: #BD7100 !important;
+    color: $primary !important;
 }
 
 /* Footer */
@@ -588,18 +756,22 @@ footer {
 .footer__content {
     @include grid(1, 1, 20px);
     padding: 40px 0px;
+
     .footer__identity {
         display: flex;
         gap: 40px;
+
         .info {
             display: flex;
             flex-direction: column;
             gap: 5px;
+
             h6 {
                 font-size: 16px;
                 color: #fff;
                 font-weight: 600 !important;
             }
+
             p {
                 font-size: 14px;
                 color: #fff;
@@ -607,14 +779,17 @@ footer {
             }
         }
     }
+
     .footer__ojs {
         filter: invert(100%);
+
         img {
             float: right;
             width: 150px;
         }
     }
 }
+
 .footer-copy {
     display: flex;
     flex-direction: column;
@@ -622,9 +797,11 @@ footer {
     align-items: center;
     padding-bottom: 30px;
     width: 100%;
+
     a {
         color: #fff;
         text-decoration: underline;
+
         img {
             width: 100px;
             margin-bottom: 20px;
@@ -696,7 +873,7 @@ footer {
         right: 35px;
         border-radius: 0 8px 8px 0 !important;
         background-color: $primary !important;
-        color: #222 !important;
+        color: #fff !important;
         border: none;
         height: 43px !important;
     }

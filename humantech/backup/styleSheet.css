@@ -1,0 +1,54 @@
+.has_site_logo .pkp_site_name {
+  width: auto;
+  margin-top: -35px;
+}
+
+.pkp_site_name .is_img img {
+  display: block;
+  max-height: 50px;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.pkp_page_index .journals {
+  margin-top: 30px;
+  display: none;
+}
+
+br {
+  display: none;
+}
+
+.style1:link,
+.style1:visited,
+.style1:active {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.style1:hover {
+  color: #ffd800;
+}
+
+.pkp_brand_footer {
+  padding: 30px;
+  display: none;
+}
+
+.pkp_navigation_primary > li > a {
+  margin: 0px 5px 5px 0px;
+  padding: 10px 10px 10px 10px;
+  border-bottom: 2px solid transparent;
+  color: #fff;
+  background-color: #27506d;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .pkp_navigation_user {
+    text-align: center;
+    font-size: 13px;
+    padding-right: 20px;
+  }
+}

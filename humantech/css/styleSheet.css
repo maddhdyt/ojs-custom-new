@@ -1,12 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap");
 body {
   overflow-x: hidden !important;
-  background-image: url("https://ik.imagekit.io/arkapublisher/jurnal/imgonline-com-ua-ReplaceColor-omLSXhCRwgGMR.jpg?updatedAt=1701148204142");
+  background-image: url("https://ik.imagekit.io/arkapublisher/jurnal/background%20humantech.png?updatedAt=1701332864589");
   background-repeat: repeat;
   background-attachment: fixed;
-  background-size: 30%;
+  background-size: 50%;
   text-align: justify;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
 body::before {
@@ -16,30 +16,89 @@ body::before {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url("https://ik.imagekit.io/arkapublisher/jurnal/imgonline-com-ua-ReplaceColor-omLSXhCRwgGMR.jpg?updatedAt=1701148204142");
+  background-image: url("https://ik.imagekit.io/arkapublisher/jurnal/background%20humantech.png?updatedAt=1701332864589");
   background-repeat: repeat;
   background-size: 30%;
-  filter: invert(0.2);
-  z-index: -1; /* Ensure the pseudo-element is behind the content */
+  filter: invert(0.1);
+  z-index: -1;
+  /* Ensure the pseudo-element is behind the content */
 }
 
+.pkp_page_index .journal-description {
+  margin-top: 10px !important;
+}
+
+.additional_content p {
+  color: #333;
+  font-weight: 400 !important;
+}
+
+.home__description {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-template-rows: repeat(1, minmax(0, 1fr));
+  gap: 20px;
+}
+.home__description .cover {
+  display: none;
+  grid-column: span 2/span 2;
+}
+.home__description .cover img {
+  width: 100%;
+}
+.home__description .description {
+  grid-column: span 7/span 7;
+}
+
+.home__indexing-group {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-rows: repeat(1, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+.home__indexing-group img {
+  width: 100%;
+}
+
+@media (max-width: 743px) {
+  .home__indexing-group {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+    gap: 20px;
+  }
+  .home__description {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+    gap: 20px;
+  }
+  .home__description .cover {
+    grid-column: span 1/span 1;
+  }
+  .home__description .description {
+    grid-column: span 1/span 1;
+  }
+}
 .pkp_form.login .form-group input {
   border-radius: 12px !important;
 }
 .pkp_form.login .buttons {
   display: flex !important;
   justify-content: flex-end;
-  gap: 20px;
+  gap: 10px;
 }
 .pkp_form.login .buttons button {
   order: 2;
-  background-color: #FFC700;
-  color: #222;
+  background-color: #1F4CA1;
+  color: #fff;
   border: none !important;
   border-radius: 12px;
 }
 .pkp_form.login .buttons a {
-  background-color: #FDF8CC;
+  display: none;
+  background-color: rgba(255, 199, 0, 0.1254901961);
   color: #222;
   transition: all 400ms;
   border: none;
@@ -55,7 +114,8 @@ body::before {
 .pkp_form.register fieldset .fields .form-group label {
   width: 100%;
 }
-.pkp_form.register fieldset .fields .form-group label input, .pkp_form.register fieldset .fields .form-group label select {
+.pkp_form.register fieldset .fields .form-group label input,
+.pkp_form.register fieldset .fields .form-group label select {
   width: 100%;
   border-radius: 12px;
 }
@@ -76,14 +136,15 @@ body::before {
 }
 .pkp_form.register .buttons button {
   order: 2;
-  background-color: #FFC700;
-  color: #222;
+  background-color: #1F4CA1;
+  color: #fff;
   font-weight: 600;
   border-radius: 12px;
   border: none;
 }
 .pkp_form.register .buttons a {
-  background-color: #FDF8CC;
+  display: none;
+  background-color: rgba(255, 199, 0, 0.1254901961);
   color: #222;
   font-weight: 600;
   transition: all 400ms;
@@ -250,7 +311,7 @@ body::before {
 }
 
 .pkp_block.block_custom .content .sidebar__title {
-  border-left: 2px solid #FFC700;
+  border-left: 2px solid #1F4CA1;
   padding-left: 10px;
   font-size: 24px;
   font-weight: 600;
@@ -272,16 +333,20 @@ body::before {
 .pkp_block.block_custom .content .sidebar__container .menu__title {
   font-size: 16px;
   color: #222;
-  margin-top: 24px;
+  margin: 24px 0 20px 0 !important;
   font-weight: 600;
+  padding-left: 8px;
+  line-height: 18px;
+  border-left: 3px solid #1F4CA1;
 }
 .pkp_block.block_custom .content .sidebar__container .issue__journal-expand {
   display: block;
   margin-top: 15px;
-  color: #222;
-  background-color: #FFC700;
+  color: #fff;
+  font-weight: 500;
+  background-color: #1F4CA1;
   border-radius: 8px;
-  padding: 8px 12px;
+  padding: 8px 16px;
   width: -moz-fit-content;
   width: fit-content;
   align-self: flex-end;
@@ -297,8 +362,8 @@ body::before {
 }
 .pkp_block.block_custom .content .sidebar__container .submissions__btn {
   border-radius: 8px;
-  background-color: #FFC700;
-  color: #222;
+  background-color: #1F4CA1;
+  color: #fff;
   font-size: 14px;
   padding: 10px;
   font-weight: 500 !important;
@@ -328,7 +393,7 @@ body::before {
   width: 100%;
   padding: 8px 14px;
   border-radius: 8px;
-  background-color: #FDF8CC;
+  background-color: rgba(255, 199, 0, 0.1254901961);
   color: #222;
   text-decoration: none;
   transition: all 300ms;
@@ -354,19 +419,55 @@ body::before {
   border: 1px solid #eaeaea;
 }
 
-.current_issue .page-header h2 {
+.current_issue .page-header, .issue-toc .page-header {
+  border-bottom: none !important;
+}
+.current_issue .page-header h2, .issue-toc .page-header h2 {
   font-size: 24px !important;
   font-weight: 600;
   color: #222;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Outfit", sans-serif;
+  padding-left: 8px;
+  border-left: 3px solid #1F4CA1;
 }
-.current_issue .current_issue_title.lead {
+.current_issue .current_issue_title.lead, .issue-toc .current_issue_title.lead {
   font-size: 20px;
   font-weight: 600;
   color: #444;
 }
+.current_issue .sections .section .media-list, .issue-toc .sections .section .media-list {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+.current_issue .sections .section .media-list > div, .issue-toc .sections .section .media-list > div {
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 4px 0px #ddd;
+}
+.current_issue .sections .section .media-list > div .breadcrumb, .issue-toc .sections .section .media-list > div .breadcrumb {
+  margin-bottom: 0px !important;
+  border-radius: 8px;
+  background-color: rgba(255, 199, 0, 0.1254901961);
+  margin-top: 15px;
+  font-weight: 500;
+  color: #333;
+  font-size: 14px;
+}
+.current_issue .sections .section .media-list > div .breadcrumb img, .issue-toc .sections .section .media-list > div .breadcrumb img {
+  display: none !important;
+}
 
 /* Article List Custom Css */
+.issues.media-list .issue-summary.media .media-body .media-heading a {
+  font-family: "Outfit", sans-serif !important;
+  font-weight: 600 !important;
+  color: #222 !important;
+}
+.issues.media-list .issue-summary.media .media-body .media-heading div {
+  font-family: "Outfit", sans-serif !important;
+}
+
 .sections .section .page-header h2 small {
   font-size: 24px;
   font-weight: 600;
@@ -394,25 +495,42 @@ body::before {
 }
 
 .btn.btn-primary.read-more {
-  background-color: #FFC700 !important;
-  color: #222;
+  background-color: #1F4CA1 !important;
+  color: #fff;
   border: none !important;
   border-radius: 12px;
   margin-bottom: 50px;
+  margin-top: 20px;
   float: right;
 }
-
-.media-list a {
-  font-weight: 600 !important;
-  color: #BD7100;
+.btn.btn-primary.read-more span {
+  display: none;
 }
 
-.media-list .breadcrumb {
-  margin-top: 10px !important;
-  border-radius: 12px;
-  background-color: #fff;
-  box-shadow: 0px 0px 4px 0px #eaeaea;
-  border: 1px solid #eaeaea;
+.media-list h4 {
+  margin-top: 0 !important;
+}
+.media-list h4 a {
+  font-weight: 600 !important;
+  color: #222;
+  font-family: "Outfit", sans-serif;
+  line-height: 28px;
+}
+.media-list .meta .authors {
+  font-weight: 400 !important;
+  color: #444 !important;
+  font-size: 14px;
+}
+
+.page.page_article .cmp_breadcrumbs {
+  text-align: start !important;
+}
+.page.page_article .article-details header h1 {
+  font-size: 24px;
+  color: #222;
+  font-weight: 600;
+  font-family: "Outfit", sans-serif;
+  line-height: 32px;
 }
 
 .panel.panel-default.issue {
@@ -426,14 +544,17 @@ body::before {
 }
 
 .panel.panel-default.issue .panel-heading {
-  background-color: #FDF8CC;
-  color: #BD7100 !important;
+  background-color: #1F4CA1;
+  color: #fff !important;
   font-weight: 600;
+}
+.panel.panel-default.issue .panel-body a {
+  text-align: start !important;
 }
 
 .list-group-item.date-published {
-  background-color: #FDF8CC;
-  color: #BD7100;
+  background-color: #1F4CA1;
+  color: #fff;
   font-weight: 600;
   border: none;
   border-bottom: 1px solid #ddd;
@@ -462,8 +583,8 @@ body::before {
 }
 
 .panel.panel-default.how-to-cite .panel-heading {
-  background-color: #f8d29d;
-  color: #9f3a07;
+  background-color: #1F4CA1;
+  color: #fff;
   font-weight: 600;
   border-radius: 4px 4px 0px 0px;
 }
@@ -479,8 +600,8 @@ body::before {
 }
 
 .panel.panel-default.section .panel-heading {
-  background-color: #FDF8CC;
-  color: #BD7100;
+  background-color: #1F4CA1;
+  color: #fff;
   font-weight: 600;
 }
 
@@ -502,7 +623,7 @@ body::before {
 
 /* Navigation */
 .cmp_breadcrumbs .breadcrumb li a {
-  color: #BD7100 !important;
+  color: #1F4CA1 !important;
 }
 
 /* Footer */
@@ -629,8 +750,8 @@ footer .container .row .col-md-2 a .img-responsive {
     position: absolute !important;
     right: 35px;
     border-radius: 0 8px 8px 0 !important;
-    background-color: #FFC700 !important;
-    color: #222 !important;
+    background-color: #1F4CA1 !important;
+    color: #fff !important;
     border: none;
     height: 43px !important;
   }
@@ -668,4 +789,4 @@ footer .container .row .col-md-2 a .img-responsive {
   .navbar {
     width: 20% !important;
   }
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=styleSheet.css.map */

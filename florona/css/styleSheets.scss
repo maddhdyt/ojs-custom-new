@@ -1,6 +1,6 @@
 // my custom css
 $primary : #01ABAA;
-$secondary : #FFC700;
+$secondary : #01ABAA;
 $secondary-f : #d8ffff;
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
 
@@ -454,6 +454,7 @@ body {
 
             &:hover {
                 background-color: $secondary;
+                color: #fff;
             }
         }
     }

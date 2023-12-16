@@ -90,7 +90,7 @@ body {
   border-radius: 12px;
 }
 .pkp_form.login .buttons a:hover {
-  background-color: #FFC700;
+  background-color: #01ABAA;
 }
 
 .pkp_form.register fieldset .fields .form-group {
@@ -137,7 +137,7 @@ body {
   border-radius: 12px;
 }
 .pkp_form.register .buttons a:hover {
-  background-color: #FFC700;
+  background-color: #01ABAA;
 }
 
 .additional__title {
@@ -386,7 +386,8 @@ body {
   text-align: center;
 }
 .pkp_block.block_custom .content .sidebar__container .menu__group .menu__link:hover {
-  background-color: #FFC700;
+  background-color: #01ABAA;
+  color: #fff;
 }
 .pkp_block.block_custom .content .sidebar__container .sponsored__group {
   display: grid;

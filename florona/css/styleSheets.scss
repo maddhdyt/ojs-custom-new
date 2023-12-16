@@ -63,6 +63,7 @@ body {
     .cover {
         display: none;
         @include col_span(2);
+
         img {
             width: 100%
         }
@@ -352,6 +353,10 @@ body {
     border: none;
     padding: 0 !important;
     overflow: hidden;
+
+    .title {
+        display: none;
+    }
 }
 
 .pkp_block.block_custom .content {
@@ -475,7 +480,8 @@ body {
 
 
 // Current Issue
-.current_issue, .issue-toc {
+.current_issue,
+.issue-toc {
     .page-header {
         border-bottom: none !important;
 
@@ -503,11 +509,19 @@ body {
         >div {
             padding: 20px;
             border-radius: 20px;
-            box-shadow: 0px 0px 4px 0px #ddd;
+            border: 1px solid #eee;
+            transition: all 600ms;
+
+            &:hover {
+                box-shadow: 0px 0px 4px 1px #01ABAA30;
+                border: 1px solid $primary;
+            }
+
             div {
                 h4 {
                     a {
                         color: #00636a !important;
+                        text-decoration: none;
                     }
                 }
             }
@@ -520,6 +534,7 @@ body {
                 font-weight: 500;
                 color: #333;
                 font-size: 14px;
+
                 img {
                     display: none !important;
                 }
@@ -538,6 +553,7 @@ body {
                     font-weight: 600 !important;
                     color: #222 !important;
                 }
+
                 div {
                     font-family: 'Outfit', sans-serif !important;
                 }
@@ -588,6 +604,7 @@ body {
     margin-bottom: 50px;
     margin-top: 20px;
     float: right;
+
     span {
         display: none;
     }
@@ -619,6 +636,7 @@ body {
     .cmp_breadcrumbs {
         text-align: start !important;
     }
+
     .article-details {
         header {
             h1 {
@@ -648,12 +666,13 @@ body {
         color: #fff !important;
         font-weight: 600;
     }
+
     .panel-body {
         a {
             text-align: start !important;
         }
     }
-} 
+}
 
 .list-group-item.date-published {
     background-color: $primary;
@@ -730,18 +749,14 @@ body {
 }
 
 /* Footer */
-footer .container {
-    width: 100% !important;
-}
-
 footer {
     background-color: #444 !important;
     padding-bottom: 0 !important;
-    margin-top: 0 !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    margin: 0 auto !important;
 
     .container {
+        width: 100% !important;
+
         .row {
             .col-md-10 {
                 width: 100%;
@@ -760,39 +775,85 @@ footer {
     }
 }
 
-.footer__content {
-    @include grid(1, 1, 20px);
-    padding: 40px 0px;
+.footer-content {
+    @include grid(1, 1, 40px);
+    padding: 20px 0 60px 0;
+    border-bottom: 1px solid #fff;
 
-    .footer__identity {
+    .ident {
         display: flex;
-        gap: 40px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
 
-        .info {
+        p {
+            color: #fff;
+            font-size: 12px;
+            line-height: 24px;
+            margin-top: 20px;
+        }
+
+        a {
+            text-decoration: underline !important;
+            display: block;
+            margin-top: 16px;
+            color: #fff !important;
+            font-weight: 500 !important;
+            font-size: 14px;
+        }
+
+        .barcode-group {
             display: flex;
-            flex-direction: column;
-            gap: 5px;
+            gap: 20px;
+            margin-top: 20px;
 
-            h6 {
-                font-size: 16px;
-                color: #fff;
-                font-weight: 600 !important;
+            a {
+                img {
+                    width: 120px;
+                }
             }
 
-            p {
-                font-size: 14px;
-                color: #fff;
-                font-weight: 400 !important;
-            }
         }
     }
 
-    .footer__ojs {
-        filter: invert(100%);
+    .flag-counter {
+        .title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 120px;
 
-        img {
-            float: right;
-            width: 150px;
+            h6 {
+                color: #fff;
+                font-size: 16px !important;
+                font-weight: 500;
+                font-family: 'Nunito Sans', serif !important;
+            }
+
+            a {
+                color: #fff !important;
+                font-size: 12px;
+                text-decoration: underline;
+            }
+        }
+
+        .stat {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            gap: 70px;
+        }
+    }
+
+    .journal-platform {
+        a {
+            .img-responsive {
+                filter: brightness(0) invert(1);
+                width: 60%;
+                margin: 0 auto;
+                margin-top: 15px;
+            }
         }
     }
 }
@@ -802,7 +863,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 30px;
+    padding: 30px 0;
     width: 100%;
 
     a {
@@ -822,8 +883,22 @@ footer {
 }
 
 @media (min-width: 743px) {
-    .footer__content {
-        @include grid(2, 1, 20px);
+    .footer-content {
+        @include grid(3, 1, 60px);
+
+        .ident {
+            display: block;
+            text-align: start;
+        }
+
+        .journal-platform {
+            a {
+                img {
+                    margin: 0;
+                    float: right;
+                }
+            }
+        }
     }
 }
 

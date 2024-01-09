@@ -469,6 +469,7 @@ body {
         text-decoration: none;
         font-size: 14px;
         transition: all 300ms;
+
         &:hover {
             transform: scale(1.05);
         }
@@ -605,14 +606,16 @@ body {
         gap: 17px;
 
         >div {
-            padding: 20px;
+            background: linear-gradient(white, white) padding-box,
+                linear-gradient(to right, #ddd, #ddd) border-box;
             border-radius: 20px;
-            border: 2px solid #eee;
-            transition: all 600ms;
-
+            border: 1px solid transparent;
+            padding: 20px;
+            transition: ease 300ms;
             &:hover {
                 box-shadow: 0px 0px 4px 1px #01ABAA30;
-                border: 2px solid $primary;
+                background: linear-gradient(white, white) padding-box,
+                linear-gradient(90deg, #405784 16.87%, #8F54D7 66.6%, #FF9090 88.39%) border-box;
             }
 
             div {

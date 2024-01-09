@@ -529,15 +529,16 @@ body {
 }
 .current_issue .sections .section .media-list > div,
 .issue-toc .sections .section .media-list > div {
-  padding: 20px;
+  background: linear-gradient(white, white) padding-box, linear-gradient(to right, #ddd, #ddd) border-box;
   border-radius: 20px;
-  border: 2px solid #eee;
-  transition: all 600ms;
+  border: 1px solid transparent;
+  padding: 20px;
+  transition: ease 300ms;
 }
 .current_issue .sections .section .media-list > div:hover,
 .issue-toc .sections .section .media-list > div:hover {
   box-shadow: 0px 0px 4px 1px rgba(1, 171, 170, 0.1882352941);
-  border: 2px solid #2E494A;
+  background: linear-gradient(white, white) padding-box, linear-gradient(90deg, #405784 16.87%, #8F54D7 66.6%, #FF9090 88.39%) border-box;
 }
 .current_issue .sections .section .media-list > div div h4 a,
 .issue-toc .sections .section .media-list > div div h4 a {

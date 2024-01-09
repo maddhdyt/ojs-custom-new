@@ -15,23 +15,90 @@ body {
   background-size: 20%;
 }
 
-.cmp_form.cmp_form.login, .cmp_form.register {
+.cmp_form.cmp_form.login,
+.cmp_form.register {
   min-width: 100% !important;
   padding: 20px;
   border-radius: 6px !important;
   box-shadow: 0px 1px 4px 0px rgb(221, 221, 221) !important;
 }
-.cmp_form.cmp_form.login .fields .username, .cmp_form.cmp_form.login .fields .password, .cmp_form.cmp_form.login .fields .email, .cmp_form.cmp_form.login .fields .given_name, .cmp_form.cmp_form.login .fields .family_name, .cmp_form.cmp_form.login .fields .affiliation, .cmp_form.cmp_form.login .fields .country, .cmp_form.register .fields .username, .cmp_form.register .fields .password, .cmp_form.register .fields .email, .cmp_form.register .fields .given_name, .cmp_form.register .fields .family_name, .cmp_form.register .fields .affiliation, .cmp_form.register .fields .country {
+.cmp_form.cmp_form.login .fields .username,
+.cmp_form.cmp_form.login .fields .password,
+.cmp_form.cmp_form.login .fields .email,
+.cmp_form.cmp_form.login .fields .given_name,
+.cmp_form.cmp_form.login .fields .family_name,
+.cmp_form.cmp_form.login .fields .affiliation,
+.cmp_form.cmp_form.login .fields .country,
+.cmp_form.register .fields .username,
+.cmp_form.register .fields .password,
+.cmp_form.register .fields .email,
+.cmp_form.register .fields .given_name,
+.cmp_form.register .fields .family_name,
+.cmp_form.register .fields .affiliation,
+.cmp_form.register .fields .country {
   padding-bottom: 20px !important;
 }
-.cmp_form.cmp_form.login .fields .username label, .cmp_form.cmp_form.login .fields .password label, .cmp_form.cmp_form.login .fields .email label, .cmp_form.cmp_form.login .fields .given_name label, .cmp_form.cmp_form.login .fields .family_name label, .cmp_form.cmp_form.login .fields .affiliation label, .cmp_form.cmp_form.login .fields .country label, .cmp_form.register .fields .username label, .cmp_form.register .fields .password label, .cmp_form.register .fields .email label, .cmp_form.register .fields .given_name label, .cmp_form.register .fields .family_name label, .cmp_form.register .fields .affiliation label, .cmp_form.register .fields .country label {
+.cmp_form.cmp_form.login .fields .username label,
+.cmp_form.cmp_form.login .fields .password label,
+.cmp_form.cmp_form.login .fields .email label,
+.cmp_form.cmp_form.login .fields .given_name label,
+.cmp_form.cmp_form.login .fields .family_name label,
+.cmp_form.cmp_form.login .fields .affiliation label,
+.cmp_form.cmp_form.login .fields .country label,
+.cmp_form.register .fields .username label,
+.cmp_form.register .fields .password label,
+.cmp_form.register .fields .email label,
+.cmp_form.register .fields .given_name label,
+.cmp_form.register .fields .family_name label,
+.cmp_form.register .fields .affiliation label,
+.cmp_form.register .fields .country label {
   margin-top: 5px;
 }
-.cmp_form.cmp_form.login .fields .username label span, .cmp_form.cmp_form.login .fields .password label span, .cmp_form.cmp_form.login .fields .email label span, .cmp_form.cmp_form.login .fields .given_name label span, .cmp_form.cmp_form.login .fields .family_name label span, .cmp_form.cmp_form.login .fields .affiliation label span, .cmp_form.cmp_form.login .fields .country label span, .cmp_form.register .fields .username label span, .cmp_form.register .fields .password label span, .cmp_form.register .fields .email label span, .cmp_form.register .fields .given_name label span, .cmp_form.register .fields .family_name label span, .cmp_form.register .fields .affiliation label span, .cmp_form.register .fields .country label span {
+.cmp_form.cmp_form.login .fields .username label span,
+.cmp_form.cmp_form.login .fields .password label span,
+.cmp_form.cmp_form.login .fields .email label span,
+.cmp_form.cmp_form.login .fields .given_name label span,
+.cmp_form.cmp_form.login .fields .family_name label span,
+.cmp_form.cmp_form.login .fields .affiliation label span,
+.cmp_form.cmp_form.login .fields .country label span,
+.cmp_form.register .fields .username label span,
+.cmp_form.register .fields .password label span,
+.cmp_form.register .fields .email label span,
+.cmp_form.register .fields .given_name label span,
+.cmp_form.register .fields .family_name label span,
+.cmp_form.register .fields .affiliation label span,
+.cmp_form.register .fields .country label span {
   font-size: 16px !important;
   margin-bottom: 5px !important;
 }
-.cmp_form.cmp_form.login .fields .username label input, .cmp_form.cmp_form.login .fields .username label select, .cmp_form.cmp_form.login .fields .password label input, .cmp_form.cmp_form.login .fields .password label select, .cmp_form.cmp_form.login .fields .email label input, .cmp_form.cmp_form.login .fields .email label select, .cmp_form.cmp_form.login .fields .given_name label input, .cmp_form.cmp_form.login .fields .given_name label select, .cmp_form.cmp_form.login .fields .family_name label input, .cmp_form.cmp_form.login .fields .family_name label select, .cmp_form.cmp_form.login .fields .affiliation label input, .cmp_form.cmp_form.login .fields .affiliation label select, .cmp_form.cmp_form.login .fields .country label input, .cmp_form.cmp_form.login .fields .country label select, .cmp_form.register .fields .username label input, .cmp_form.register .fields .username label select, .cmp_form.register .fields .password label input, .cmp_form.register .fields .password label select, .cmp_form.register .fields .email label input, .cmp_form.register .fields .email label select, .cmp_form.register .fields .given_name label input, .cmp_form.register .fields .given_name label select, .cmp_form.register .fields .family_name label input, .cmp_form.register .fields .family_name label select, .cmp_form.register .fields .affiliation label input, .cmp_form.register .fields .affiliation label select, .cmp_form.register .fields .country label input, .cmp_form.register .fields .country label select {
+.cmp_form.cmp_form.login .fields .username label input,
+.cmp_form.cmp_form.login .fields .username label select,
+.cmp_form.cmp_form.login .fields .password label input,
+.cmp_form.cmp_form.login .fields .password label select,
+.cmp_form.cmp_form.login .fields .email label input,
+.cmp_form.cmp_form.login .fields .email label select,
+.cmp_form.cmp_form.login .fields .given_name label input,
+.cmp_form.cmp_form.login .fields .given_name label select,
+.cmp_form.cmp_form.login .fields .family_name label input,
+.cmp_form.cmp_form.login .fields .family_name label select,
+.cmp_form.cmp_form.login .fields .affiliation label input,
+.cmp_form.cmp_form.login .fields .affiliation label select,
+.cmp_form.cmp_form.login .fields .country label input,
+.cmp_form.cmp_form.login .fields .country label select,
+.cmp_form.register .fields .username label input,
+.cmp_form.register .fields .username label select,
+.cmp_form.register .fields .password label input,
+.cmp_form.register .fields .password label select,
+.cmp_form.register .fields .email label input,
+.cmp_form.register .fields .email label select,
+.cmp_form.register .fields .given_name label input,
+.cmp_form.register .fields .given_name label select,
+.cmp_form.register .fields .family_name label input,
+.cmp_form.register .fields .family_name label select,
+.cmp_form.register .fields .affiliation label input,
+.cmp_form.register .fields .affiliation label select,
+.cmp_form.register .fields .country label input,
+.cmp_form.register .fields .country label select {
   outline: none !important;
   display: block !important;
   min-width: 100% !important;
@@ -41,25 +108,31 @@ body {
   box-sizing: border-box !important;
   margin-bottom: 10px !important;
 }
-.cmp_form.cmp_form.login .fields .buttons a, .cmp_form.cmp_form.login .fields .buttons button, .cmp_form.register .fields .buttons a, .cmp_form.register .fields .buttons button {
+.cmp_form.cmp_form.login .fields .buttons a,
+.cmp_form.cmp_form.login .fields .buttons button,
+.cmp_form.register .fields .buttons a,
+.cmp_form.register .fields .buttons button {
   font-size: 14px !important;
   border-radius: 8px !important;
   font-weight: 500 !important;
   text-decoration: none !important;
   cursor: pointer !important;
 }
-.cmp_form.cmp_form.login .fields .buttons a, .cmp_form.register .fields .buttons a {
+.cmp_form.cmp_form.login .fields .buttons a,
+.cmp_form.register .fields .buttons a {
   background-color: #fff !important;
   color: #005424 !important;
   border: 1px solid #005424;
   transition: all 300ms;
   padding: 5px 16px !important;
 }
-.cmp_form.cmp_form.login .fields .buttons a:hover, .cmp_form.register .fields .buttons a:hover {
+.cmp_form.cmp_form.login .fields .buttons a:hover,
+.cmp_form.register .fields .buttons a:hover {
   background-color: #005424 !important;
   color: #fff !important;
 }
-.cmp_form.cmp_form.login .fields .buttons button, .cmp_form.register .fields .buttons button {
+.cmp_form.cmp_form.login .fields .buttons button,
+.cmp_form.register .fields .buttons button {
   padding: 6px 16px !important;
   background-color: #005424 !important;
   color: #fff !important;
@@ -72,7 +145,8 @@ body {
   float: right;
   display: flex !important;
 }
-.cmp_form.register .buttons a, .cmp_form.register .buttons button {
+.cmp_form.register .buttons a,
+.cmp_form.register .buttons button {
   display: block !important;
   width: -moz-fit-content !important;
   width: fit-content !important;
@@ -247,12 +321,14 @@ body {
   width: 100%;
 }
 
-.obj_article_details .main_entry, .obj_article_details .entry_details {
+.obj_article_details .main_entry,
+.obj_article_details .entry_details {
   width: 100% !important;
   padding: 0 15px !important;
   border: none !important;
 }
-.obj_article_details .main_entry div, .obj_article_details .entry_details div {
+.obj_article_details .main_entry div,
+.obj_article_details .entry_details div {
   border: none !important;
 }
 
@@ -327,12 +403,6 @@ body {
     background-color: #c8ecd7 !important;
     color: #005424 !important;
   }
-  .pkp_structure_footer_wrapper {
-    background-color: transparent !important;
-  }
-  .pkp_structure_footer {
-    background-color: #ddd !important;
-  }
 }
 @media (min-width: 768px) {
   .obj_article_details .main_entry {
@@ -352,5 +422,223 @@ body {
   .pkp_structure_main:before,
   .pkp_structure_main:after {
     background-color: #fff !important;
+  }
+}
+/* Footer */
+.pkp_structure_footer_wrapper {
+  background-color: #444;
+}
+
+footer {
+  padding-bottom: 0 !important;
+  margin: 0 auto !important;
+}
+footer .container {
+  width: 100% !important;
+}
+footer .container .row .col-md-10 {
+  width: 100%;
+}
+footer .container .row .col-md-2 {
+  display: none;
+}
+footer .container .row .col-md-2 a .img-responsive {
+  filter: brightness(0) invert(1);
+}
+
+.pkp_brand_footer {
+  display: none !important;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-rows: repeat(1, minmax(0, 1fr));
+  gap: 40px;
+  padding: 40px 0 60px 0;
+  border-bottom: 1px solid #fff;
+}
+.footer-content .ident {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.footer-content .ident p {
+  color: #fff;
+  font-size: 12px;
+  line-height: 24px;
+  margin-top: 20px;
+}
+.footer-content .ident a {
+  text-decoration: underline !important;
+  display: block;
+  margin-top: 16px;
+  color: #fff !important;
+  font-weight: 500 !important;
+  font-size: 14px;
+}
+.footer-content .ident .barcode-group {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+.footer-content .ident .barcode-group a img {
+  width: 120px;
+}
+.footer-content .fast-navigation {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(1, minmax(0, 1fr));
+  gap: 20px;
+}
+.footer-content .fast-navigation .menu__list {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 15px;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.footer-content .fast-navigation .menu__list p {
+  font-size: 18px !important;
+  color: #fff !important;
+  font-weight: 600;
+  margin: 0 !important;
+}
+.footer-content .fast-navigation .menu__list a {
+  color: #fff;
+  font-size: 14px !important;
+  text-decoration: none;
+}
+.footer-content .journal-platform a .img-responsive {
+  filter: brightness(0) invert(1);
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+.footer-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  width: 100%;
+}
+.footer-copy a {
+  color: #fff;
+  text-decoration: underline;
+}
+.footer-copy a img {
+  width: 100px;
+  margin-bottom: 20px;
+}
+.footer-copy p {
+  font-size: 12px;
+  color: #fff;
+}
+
+@media (min-width: 743px) {
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+    gap: 30px;
+  }
+  .footer-content .ident {
+    grid-column: span 2/span 2;
+    display: block;
+    text-align: start;
+  }
+  .footer-content .fast-navigation {
+    grid-column: span 2/span 2;
+  }
+  .footer-content .journal-platform {
+    grid-column: span 1/span 1;
+  }
+  .footer-content .journal-platform a img {
+    margin: 0;
+    float: right;
+  }
+}
+@media (min-width: 547px) {
+  .container,
+  footer,
+  .navbar {
+    width: 90% !important;
+  }
+}
+@media (min-width: 768px) {
+  .container,
+  footer,
+  .navbar {
+    width: 85% !important;
+  }
+}
+/* Media Max Width */
+@media (max-width: 743px) {
+  .nav.navbar-nav {
+    padding: 0 25px !important;
+  }
+  .navbar-form.navbar-left {
+    padding: 0 25px !important;
+  }
+  .container-fluid > .navbar-header {
+    padding: 0 25px !important;
+  }
+  .pkp_structure_page {
+    overflow-x: hidden !important;
+  }
+}
+@media (min-width: 1024px) {
+  .container,
+  footer,
+  .navbar {
+    width: 85% !important;
+  }
+  .navbar-form.navbar-left .btn.btn-default {
+    position: absolute !important;
+    right: 35px;
+    border-radius: 0 8px 8px 0 !important;
+    background-color: #F27C22 !important;
+    color: #fff !important;
+    border: none;
+    height: 43px !important;
+  }
+  .navbar-form.navbar-left .form-group .form-control {
+    width: 300px !important;
+  }
+  .additional_content div p strong img {
+    width: 100% !important;
+  }
+}
+@media (min-width: 1640px) {
+  .container,
+  footer,
+  .navbar {
+    width: 70% !important;
+  }
+}
+@media (min-width: 2040px) {
+  .container,
+  footer,
+  .navbar {
+    width: 60% !important;
+  }
+}
+@media (min-width: 2540px) {
+  .container,
+  footer,
+  .navbar {
+    width: 50% !important;
+  }
+}
+@media (min-width: 3040px) {
+  .container,
+  footer,
+  .navbar {
+    width: 20% !important;
   }
 }/*# sourceMappingURL=styleSheet.css.map */

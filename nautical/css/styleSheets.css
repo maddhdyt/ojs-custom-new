@@ -1,21 +1,90 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;500;600;700;800&display=swap");
 body {
   overflow-x: hidden !important;
-  background-image: url("https://ik.imagekit.io/arkapublisher/jurnal/bg-florona.png?updatedAt=1702607580214");
+  background-image: url("https://ik.imagekit.io/arkapublisher/jurnal/abstract_nautical.png?updatedAt=1704769946107");
   background-repeat: repeat;
   background-attachment: fixed;
-  background-size: 20%;
+  background-size: 50%;
   text-align: justify;
-  font-family: "Outfit", sans-serif;
+  font-family: "Merriweather", sans-serif;
 }
 
 .pkp_page_index .journal-description {
   margin-top: 10px !important;
 }
 
+.additional_content {
+  padding-top: 10px;
+}
 .additional_content p {
   color: #333;
+  font-size: 14px !important;
   font-weight: 400 !important;
+}
+.additional_content .journal__information {
+  background-color: #F6F6F6;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-rows: repeat(1, minmax(0, 1fr));
+  gap: 25px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+.additional_content .journal__information .cover img {
+  width: 50%;
+}
+.additional_content .journal__information .information {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.additional_content .journal__information .information p {
+  font-size: 14px;
+  color: #444;
+}
+.additional_content .journal__information .information h2 {
+  font-size: 24px;
+  color: #444;
+  font-weight: 700;
+}
+.additional_content .journal__information .information .btn {
+  color: #fff;
+  background: var(--Linear, linear-gradient(90deg, #405784 16.87%, #8F54D7 66.6%, #FF9090 88.39%));
+  padding: 12px 35px;
+  border-radius: 6px;
+  border: none !important;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  transition: all 300ms;
+}
+.additional_content .journal__information .information .btn:hover {
+  transform: scale(1.05);
+}
+.additional_content .journal__information .information .btn p {
+  color: #fff;
+  margin: 0 !important;
+}
+@media (min-width: 746px) {
+  .additional_content .information {
+    grid-column: span 4/span 4;
+  }
+  .additional_content .cover {
+    grid-column: span 2/span 2;
+  }
+  .additional_content .cover img {
+    width: 100% !important;
+  }
+  .additional_content .journal__information {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+    gap: 25px;
+    padding: 35px;
+    align-items: center;
+  }
 }
 
 .home__description {
@@ -76,21 +145,21 @@ body {
 }
 .pkp_form.login .buttons button {
   order: 2;
-  background-color: #01ABAA;
+  background-color: #2E494A;
   color: #fff;
   border: none !important;
   border-radius: 12px;
 }
 .pkp_form.login .buttons a {
   display: none;
-  background-color: #d8ffff;
+  background-color: rgba(242, 124, 34, 0.1019607843);
   color: #222;
   transition: all 400ms;
   border: none;
   border-radius: 12px;
 }
 .pkp_form.login .buttons a:hover {
-  background-color: #01ABAA;
+  background-color: #F27C22;
 }
 
 .pkp_form.register fieldset .fields .form-group {
@@ -121,7 +190,7 @@ body {
 }
 .pkp_form.register .buttons button {
   order: 2;
-  background-color: #01ABAA;
+  background-color: #2E494A;
   color: #fff;
   font-weight: 600;
   border-radius: 12px;
@@ -129,7 +198,7 @@ body {
 }
 .pkp_form.register .buttons a {
   display: none;
-  background-color: #d8ffff;
+  background-color: rgba(242, 124, 34, 0.1019607843);
   color: #222;
   font-weight: 600;
   transition: all 400ms;
@@ -137,7 +206,7 @@ body {
   border-radius: 12px;
 }
 .pkp_form.register .buttons a:hover {
-  background-color: #01ABAA;
+  background-color: #F27C22;
 }
 
 .additional__title {
@@ -249,7 +318,7 @@ body {
 
 /* Page Structure */
 .pkp_structure_content.container {
-  padding: 40px 20px !important;
+  padding: 20px 10px !important;
   background-color: #fff !important;
   overflow-x: hidden !important;
   box-shadow: 0px 0px 4px 0px #ddd;
@@ -299,7 +368,7 @@ body {
 }
 
 .pkp_block.block_custom .content .sidebar__title {
-  border-left: 2px solid #01ABAA;
+  border-left: 2px solid #2E494A;
   padding-left: 10px;
   font-size: 24px;
   font-weight: 600;
@@ -308,7 +377,6 @@ body {
 .pkp_block.block_custom .content .sidebar__container {
   border-radius: 8px !important;
   border: none;
-  box-shadow: 0px 0px 4px 0px #eaeaea;
   border: 1px solid #eaeaea;
   overflow: hidden;
   margin-top: 10px;
@@ -325,21 +393,25 @@ body {
   font-weight: 600;
   padding-left: 8px;
   line-height: 18px;
-  border-left: 3px solid #01ABAA;
+  border-left: 3px solid #2E494A;
 }
 .pkp_block.block_custom .content .sidebar__container .issue__journal-expand {
   display: block;
   margin-top: 15px;
   color: #fff;
   font-weight: 500;
-  background-color: #01ABAA;
+  background: var(--Linear, linear-gradient(90deg, #405784 16.87%, #8F54D7 66.6%, #FF9090 88.39%));
   border-radius: 8px;
-  padding: 8px 16px;
+  padding: 10px 18px;
   width: -moz-fit-content;
   width: fit-content;
   align-self: flex-end;
   text-decoration: none;
   font-size: 14px;
+  transition: all 300ms;
+}
+.pkp_block.block_custom .content .sidebar__container .issue__journal-expand:hover {
+  transform: scale(1.05);
 }
 .pkp_block.block_custom .content .sidebar__container .indexing__group {
   display: grid;
@@ -350,15 +422,28 @@ body {
 }
 .pkp_block.block_custom .content .sidebar__container .submissions__btn {
   border-radius: 8px;
-  background-color: #01ABAA;
   color: #fff;
   font-size: 14px;
-  padding: 10px;
+  padding: 12px 10px;
   font-weight: 500 !important;
   text-align: center;
   width: 100%;
   display: block;
   text-decoration: none;
+  transition: all 400ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: var(--Linear, linear-gradient(90deg, #405784 16.87%, #8F54D7 66.6%, #FF9090 88.39%));
+  transition: all 300ms;
+}
+.pkp_block.block_custom .content .sidebar__container .submissions__btn:hover {
+  transform: scale(1.05);
+}
+.pkp_block.block_custom .content .sidebar__container .submissions__btn img {
+  width: 20px;
+  height: 20px;
 }
 .pkp_block.block_custom .content .sidebar__container .certificate__group {
   display: flex;
@@ -370,6 +455,12 @@ body {
   border-radius: 8px;
   overflow: hidden;
 }
+.pkp_block.block_custom .content .sidebar__container .support__group {
+  display: flex;
+  flex-direction: column;
+  align-items: center !important;
+  gap: 20px;
+}
 .pkp_block.block_custom .content .sidebar__container .menu__group {
   display: flex;
   flex-direction: column;
@@ -377,20 +468,21 @@ body {
   margin-top: 10px;
 }
 .pkp_block.block_custom .content .sidebar__container .menu__group .menu__link {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
   padding: 8px 14px;
-  border-radius: 8px;
-  background-color: #d8ffff;
   color: #222;
-  text-decoration: none;
   transition: all 300ms;
   font-size: 14px !important;
-  text-align: center;
 }
-.pkp_block.block_custom .content .sidebar__container .menu__group .menu__link:hover {
-  background-color: #01ABAA;
-  color: #fff;
+.pkp_block.block_custom .content .sidebar__container .menu__group .menu__link:hover p {
+  text-decoration: underline;
+}
+.pkp_block.block_custom .content .sidebar__container .menu__group .menu__link img {
+  width: 20px;
+  height: 20px;
 }
 .pkp_block.block_custom .content .sidebar__container .sponsored__group {
   display: grid;
@@ -408,6 +500,10 @@ body {
   border: 1px solid #eaeaea;
 }
 
+.current_issue .issue-details .description p,
+.issue-toc .issue-details .description p {
+  font-size: 14px !important;
+}
 .current_issue .page-header,
 .issue-toc .page-header {
   border-bottom: none !important;
@@ -417,9 +513,7 @@ body {
   font-size: 24px !important;
   font-weight: 600;
   color: #222;
-  font-family: "Outfit", sans-serif;
-  padding-left: 8px;
-  border-left: 3px solid #01ABAA;
+  font-family: "Merriweather", sans-serif;
 }
 .current_issue .current_issue_title.lead,
 .issue-toc .current_issue_title.lead {
@@ -437,24 +531,25 @@ body {
 .issue-toc .sections .section .media-list > div {
   padding: 20px;
   border-radius: 20px;
-  border: 1px solid #eee;
+  border: 2px solid #eee;
   transition: all 600ms;
 }
 .current_issue .sections .section .media-list > div:hover,
 .issue-toc .sections .section .media-list > div:hover {
   box-shadow: 0px 0px 4px 1px rgba(1, 171, 170, 0.1882352941);
-  border: 1px solid #01ABAA;
+  border: 2px solid #2E494A;
 }
 .current_issue .sections .section .media-list > div div h4 a,
 .issue-toc .sections .section .media-list > div div h4 a {
-  color: #00636a !important;
+  color: #2E494A !important;
   text-decoration: none;
+  font-family: "Merriweather", sans-serif;
 }
 .current_issue .sections .section .media-list > div .breadcrumb,
 .issue-toc .sections .section .media-list > div .breadcrumb {
   margin-bottom: 0px !important;
   border-radius: 8px;
-  background-color: #d8ffff;
+  background-color: #d8e5ff;
   margin-top: 15px;
   font-weight: 500;
   color: #333;
@@ -467,12 +562,8 @@ body {
 
 /* Article List Custom Css */
 .issues.media-list .issue-summary.media .media-body .media-heading a {
-  font-family: "Outfit", sans-serif !important;
   font-weight: 600 !important;
   color: #222 !important;
-}
-.issues.media-list .issue-summary.media .media-body .media-heading div {
-  font-family: "Outfit", sans-serif !important;
 }
 
 .sections .section .page-header h2 small {
@@ -502,16 +593,21 @@ body {
 }
 
 .btn.btn-primary.read-more {
-  background-color: #01ABAA !important;
+  background: var(--Linear, linear-gradient(90deg, #405784 16.87%, #8F54D7 66.6%, #FF9090 88.39%)) !important;
+  padding: 12px 30px;
   color: #fff;
   border: none !important;
   border-radius: 12px;
   margin-bottom: 50px;
   margin-top: 20px;
   float: right;
+  transition: all 300ms;
 }
 .btn.btn-primary.read-more span {
   display: none;
+}
+.btn.btn-primary.read-more:hover {
+  transform: scale(1.05);
 }
 
 .media-list h4 {
@@ -520,7 +616,7 @@ body {
 .media-list h4 a {
   font-weight: 600 !important;
   color: #222;
-  font-family: "Outfit", sans-serif;
+  font-family: "Merriweather", sans-serif;
   line-height: 28px;
 }
 .media-list .meta .authors {
@@ -536,7 +632,7 @@ body {
   font-size: 24px;
   color: #222;
   font-weight: 600;
-  font-family: "Outfit", sans-serif;
+  font-family: "Merriweather", sans-serif;
   line-height: 32px;
 }
 
@@ -551,7 +647,7 @@ body {
 }
 
 .panel.panel-default.issue .panel-heading {
-  background-color: #01ABAA;
+  background-color: #2E494A;
   color: #fff !important;
   font-weight: 600;
 }
@@ -560,7 +656,7 @@ body {
 }
 
 .list-group-item.date-published {
-  background-color: #01ABAA;
+  background-color: #2E494A;
   color: #fff;
   font-weight: 600;
   border: none;
@@ -590,7 +686,7 @@ body {
 }
 
 .panel.panel-default.how-to-cite .panel-heading {
-  background-color: #01ABAA;
+  background-color: #2E494A;
   color: #fff;
   font-weight: 600;
   border-radius: 4px 4px 0px 0px;
@@ -607,7 +703,7 @@ body {
 }
 
 .panel.panel-default.section .panel-heading {
-  background-color: #01ABAA;
+  background-color: #2E494A;
   color: #fff;
   font-weight: 600;
 }
@@ -630,7 +726,7 @@ body {
 
 /* Navigation */
 .cmp_breadcrumbs .breadcrumb li a {
-  color: #01ABAA !important;
+  color: #2E494A !important;
 }
 
 /* Footer */
@@ -646,7 +742,7 @@ footer .container .row .col-md-10 {
   width: 100%;
 }
 footer .container .row .col-md-2 {
-  display: none;
+  display: none !important;
 }
 footer .container .row .col-md-2 a .img-responsive {
   filter: brightness(0) invert(1);
@@ -802,7 +898,7 @@ footer .container .row .col-md-2 a .img-responsive {
     position: absolute !important;
     right: 35px;
     border-radius: 0 8px 8px 0 !important;
-    background-color: #01ABAA !important;
+    background: var(--Linear, linear-gradient(90deg, #405784 16.87%, #8F54D7 66.6%, #FF9090 88.39%)) !important;
     color: #fff !important;
     border: none;
     height: 43px !important;

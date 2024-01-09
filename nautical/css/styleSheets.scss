@@ -1,8 +1,9 @@
 // my custom css
-$primary : #01ABAA;
-$secondary : #01ABAA;
-$secondary-f : #d8ffff;
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+$primary : #2E494A;
+$secondary : #F27C22;
+$secondary-f : #F27C221A;
+$gradient : var(--Linear, linear-gradient(90deg, #405784 16.87%, #8F54D7 66.6%, #FF9090 88.39%));
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;500;600;700;800&display=swap');
 
 @mixin flex($align, $justify) {
     display: flex;
@@ -23,27 +24,13 @@ $secondary-f : #d8ffff;
 
 body {
     overflow-x: hidden !important;
-    background-image: url('https://ik.imagekit.io/arkapublisher/jurnal/bg-florona.png?updatedAt=1702607580214');
+    background-image: url('https://ik.imagekit.io/arkapublisher/jurnal/abstract_nautical.png?updatedAt=1704769946107');
     background-repeat: repeat;
     background-attachment: fixed;
-    background-size: 20%;
+    background-size: 50%;
     text-align: justify;
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Merriweather', sans-serif;
 }
-
-// body::before {
-//     content: "";
-//     position: fixed;
-//     top: 0;
-//     right: 0;
-//     bottom: 0;
-//     left: 0;
-//     background-image: url('https://ik.imagekit.io/arkapublisher/jurnal/bg-florona.png?updatedAt=1702607580214');
-//     background-repeat: repeat;
-//     background-size: 22%;
-//     filter: invert(0.1);
-//     z-index: -1;
-// }
 
 // home custom
 .pkp_page_index .journal-description {
@@ -51,9 +38,85 @@ body {
 }
 
 .additional_content {
+    padding-top: 10px;
+
     p {
         color: #333;
+        font-size: 14px !important;
         font-weight: 400 !important;
+    }
+
+    .journal__information {
+        background-color: #F6F6F6;
+        padding: 15px;
+        @include grid(1, 1, 25px);
+        margin-bottom: 20px;
+        border-radius: 4px;
+
+        .cover {
+            img {
+                width: 50%;
+            }
+        }
+
+        .information {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            p {
+                font-size: 14px;
+                color: #444;
+            }
+
+            h2 {
+                font-size: 24px;
+                color: #444;
+                font-weight: 700;
+            }
+
+            .btn {
+                color: #fff;
+                background: $gradient;
+                padding: 12px 35px;
+                border-radius: 6px;
+                border: none !important;
+                display: flex;
+                gap: 8px;
+                align-items: center;
+                justify-content: center;
+                transition: all 300ms;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+
+                p {
+                    color: #fff;
+                    margin: 0 !important;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 746px) {
+        .information {
+            @include col_span(4);
+        }
+
+        .cover {
+            @include col_span(2);
+
+            img {
+                width: 100% !important;
+            }
+        }
+
+        .journal__information {
+            @include grid(6, 1, 25px);
+            padding: 35px;
+            align-items: center;
+        }
     }
 }
 
@@ -311,7 +374,7 @@ body {
 
 /* Page Structure */
 .pkp_structure_content.container {
-    padding: 40px 20px !important;
+    padding: 20px 10px !important;
     background-color: #fff !important;
     overflow-x: hidden !important;
     box-shadow: 0px 0px 4px 0px #ddd;
@@ -373,7 +436,6 @@ body {
 .pkp_block.block_custom .content .sidebar__container {
     border-radius: 8px !important;
     border: none;
-    box-shadow: 0px 0px 4px 0px #eaeaea;
     border: 1px solid #eaeaea;
     overflow: hidden;
     margin-top: 10px;
@@ -399,13 +461,17 @@ body {
         margin-top: 15px;
         color: #fff;
         font-weight: 500;
-        background-color: $primary;
+        background: $gradient;
         border-radius: 8px;
-        padding: 8px 16px;
+        padding: 10px 18px;
         width: fit-content;
         align-self: flex-end;
         text-decoration: none;
         font-size: 14px;
+        transition: all 300ms;
+        &:hover {
+            transform: scale(1.05);
+        }
     }
 
     .indexing__group {
@@ -415,15 +481,30 @@ body {
 
     .submissions__btn {
         border-radius: 8px;
-        background-color: $primary;
         color: #fff;
         font-size: 14px;
-        padding: 10px;
+        padding: 12px 10px;
         font-weight: 500 !important;
         text-align: center;
         width: 100%;
         display: block;
         text-decoration: none;
+        transition: all 400ms;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        background: $gradient;
+        transition: all 300ms;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        img {
+            width: 20px;
+            height: 20px;
+        }
     }
 
     .certificate__group {
@@ -438,6 +519,13 @@ body {
         }
     }
 
+    .support__group {
+        display: flex;
+        flex-direction: column;
+        align-items: center !important;
+        gap: 20px;
+    }
+
     .menu__group {
         display: flex;
         flex-direction: column;
@@ -446,20 +534,24 @@ body {
         margin-top: 10px;
 
         .menu__link {
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             width: 100%;
             padding: 8px 14px;
-            border-radius: 8px;
-            background-color: $secondary-f;
             color: #222;
-            text-decoration: none;
             transition: all 300ms;
             font-size: 14px !important;
-            text-align: center;
 
             &:hover {
-                background-color: $secondary;
-                color: #fff;
+                p {
+                    text-decoration: underline;
+                }
+            }
+
+            img {
+                width: 20px;
+                height: 20px;
             }
         }
     }
@@ -482,6 +574,14 @@ body {
 // Current Issue
 .current_issue,
 .issue-toc {
+    .issue-details {
+        .description {
+            p {
+                font-size: 14px !important;
+            }
+        }
+    }
+
     .page-header {
         border-bottom: none !important;
 
@@ -489,9 +589,7 @@ body {
             font-size: 24px !important;
             font-weight: 600;
             color: #222;
-            font-family: 'Outfit', sans-serif;
-            padding-left: 8px;
-            border-left: 3px solid $primary;
+            font-family: 'Merriweather', sans-serif;
         }
     }
 
@@ -509,19 +607,20 @@ body {
         >div {
             padding: 20px;
             border-radius: 20px;
-            border: 1px solid #eee;
+            border: 2px solid #eee;
             transition: all 600ms;
 
             &:hover {
                 box-shadow: 0px 0px 4px 1px #01ABAA30;
-                border: 1px solid $primary;
+                border: 2px solid $primary;
             }
 
             div {
                 h4 {
                     a {
-                        color: #00636a !important;
+                        color: $primary !important;
                         text-decoration: none;
+                        font-family: 'Merriweather', sans-serif;
                     }
                 }
             }
@@ -529,7 +628,7 @@ body {
             .breadcrumb {
                 margin-bottom: 0px !important;
                 border-radius: 8px;
-                background-color: $secondary-f;
+                background-color: #d8e5ff;
                 margin-top: 15px;
                 font-weight: 500;
                 color: #333;
@@ -549,13 +648,8 @@ body {
         .media-body {
             .media-heading {
                 a {
-                    font-family: 'Outfit', sans-serif !important;
                     font-weight: 600 !important;
                     color: #222 !important;
-                }
-
-                div {
-                    font-family: 'Outfit', sans-serif !important;
                 }
             }
         }
@@ -597,16 +691,22 @@ body {
 }
 
 .btn.btn-primary.read-more {
-    background-color: $primary !important;
+    background: $gradient !important;
+    padding: 12px 30px;
     color: #fff;
     border: none !important;
     border-radius: 12px;
     margin-bottom: 50px;
     margin-top: 20px;
     float: right;
+    transition: all 300ms;
 
     span {
         display: none;
+    }
+
+    &:hover {
+        transform: scale(1.05);
     }
 }
 
@@ -617,7 +717,7 @@ body {
         a {
             font-weight: 600 !important;
             color: #222;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Merriweather', sans-serif;
             line-height: 28px;
         }
     }
@@ -643,7 +743,7 @@ body {
                 font-size: 24px;
                 color: #222;
                 font-weight: 600;
-                font-family: 'Outfit', sans-serif;
+                font-family: 'Merriweather', sans-serif;
                 line-height: 32px;
             }
         }
@@ -763,7 +863,7 @@ footer {
             }
 
             .col-md-2 {
-                display: none;
+                display: none !important;
 
                 a {
                     .img-responsive {
@@ -819,18 +919,21 @@ footer {
 
     .fast-navigation {
         @include grid(2, 1, 20px);
+
         .menu__list {
             display: flex;
             flex-direction: column;
             gap: 15px;
             margin: 0 !important;
             padding: 0 !important;
+
             p {
                 font-size: 18px !important;
                 color: #fff !important;
                 font-weight: 600;
                 margin: 0 !important;
             }
+
             a {
                 color: #fff;
                 font-size: 14px !important;
@@ -889,7 +992,8 @@ footer {
         }
 
         .journal-platform {
-            @include  col_span(1);
+            @include col_span(1);
+
             a {
                 img {
                     margin: 0;
@@ -952,7 +1056,7 @@ footer {
         position: absolute !important;
         right: 35px;
         border-radius: 0 8px 8px 0 !important;
-        background-color: $primary !important;
+        background: $gradient !important;
         color: #fff !important;
         border: none;
         height: 43px !important;

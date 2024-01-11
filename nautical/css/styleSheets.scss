@@ -3,6 +3,7 @@ $primary : #2E494A;
 $secondary : #F27C22;
 $secondary-f : #F27C221A;
 $gradient : var(--Linear, linear-gradient(90deg, #405784 16.87%, #8F54D7 66.6%, #FF9090 88.39%));
+$gradient2 : var(--Gradient-2, linear-gradient(90deg, #8F54D7 16.87%, #8F54D7 45.48%, #405784 88.38%));
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;500;600;700;800&display=swap');
 
 @mixin flex($align, $justify) {
@@ -370,6 +371,10 @@ body {
 
 .navbar-collapse {
     padding: 10px 20px !important;
+}
+
+.navbar-default {
+    background-color: #2C456A;
 }
 
 /* Page Structure */

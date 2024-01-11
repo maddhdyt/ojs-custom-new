@@ -316,6 +316,10 @@ body {
   padding: 10px 20px !important;
 }
 
+.navbar-default {
+  background-color: #2C456A;
+}
+
 /* Page Structure */
 .pkp_structure_content.container {
   padding: 20px 10px !important;
